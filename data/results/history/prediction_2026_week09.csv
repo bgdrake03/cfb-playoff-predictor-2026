@@ -1,0 +1,13 @@
+seed,team,conference,record,reason,rank
+1,Indiana,Big Ten,7-1,at-large,1.0
+2,Miami,ACC,7-0,ACC champion,2.0
+3,Ohio State,Big Ten,6-1,Big Ten champion,3.0
+4,Kentucky,SEC,7-1,SEC champion,4.0
+5,Georgia,SEC,6-1,at-large,5.0
+6,Utah,Big 12,7-0,Big 12 champion,6.0
+7,UCLA,Big Ten,7-0,at-large,7.0
+8,Texas,SEC,5-2,at-large,8.0
+9,Alabama,SEC,6-2,at-large,9.0
+10,Northwestern,Big Ten,6-1,at-large,10.0
+11,BYU,Big 12,6-1,at-large,11.0
+12,Boise State,Pac-12,6-1,highest-ranked other champion,15.0
