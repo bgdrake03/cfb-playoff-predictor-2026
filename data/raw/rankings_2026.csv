@@ -1126,3 +1126,128 @@ season,seasonType,week,poll,rank,school,conference,points
 2026,regular,9,AFCA Division III Coaches Poll,23,Lake Forest,Midwest,133
 2026,regular,9,AFCA Division III Coaches Poll,24,Rowan,New Jersey,92
 2026,regular,9,AFCA Division III Coaches Poll,25,Heidelberg,Ohio,82
+2026,regular,10,Coaches Poll,1,Miami,ACC,1818
+2026,regular,10,Coaches Poll,2,Georgia,SEC,1719
+2026,regular,10,Coaches Poll,3,Indiana,Big Ten,1597
+2026,regular,10,Coaches Poll,4,Utah,Big 12,1590
+2026,regular,10,Coaches Poll,5,UCLA,Big Ten,1501
+2026,regular,10,Coaches Poll,6,Notre Dame,FBS Independents,1498
+2026,regular,10,Coaches Poll,7,Kentucky,SEC,1344
+2026,regular,10,Coaches Poll,8,BYU,Big 12,1278
+2026,regular,10,Coaches Poll,9,Alabama,SEC,1131
+2026,regular,10,Coaches Poll,10,Ohio State,Big Ten,1101
+2026,regular,10,Coaches Poll,11,Texas,SEC,1057
+2026,regular,10,Coaches Poll,12,Ole Miss,SEC,1034
+2026,regular,10,Coaches Poll,13,Texas Tech,Big 12,962
+2026,regular,10,Coaches Poll,14,Wake Forest,ACC,897
+2026,regular,10,Coaches Poll,15,LSU,SEC,886
+2026,regular,10,Coaches Poll,16,Tennessee,SEC,761
+2026,regular,10,Coaches Poll,17,USC,Big Ten,570
+2026,regular,10,Coaches Poll,18,Houston,Big 12,556
+2026,regular,10,Coaches Poll,19,Missouri,SEC,488
+2026,regular,10,Coaches Poll,20,Iowa,Big Ten,448
+2026,regular,10,Coaches Poll,21,Boise State,Pac-12,445
+2026,regular,10,Coaches Poll,22,Arizona,Big 12,174
+2026,regular,10,Coaches Poll,23,Northwestern,Big Ten,150
+2026,regular,10,Coaches Poll,24,SMU,ACC,146
+2026,regular,10,Coaches Poll,25,New Mexico,Mountain West,119
+2026,regular,10,AP Top 25,1,Miami,ACC,1740
+2026,regular,10,AP Top 25,2,Georgia,SEC,1648
+2026,regular,10,AP Top 25,3,Utah,Big 12,1540
+2026,regular,10,AP Top 25,4,Notre Dame,FBS Independents,1476
+2026,regular,10,AP Top 25,5,UCLA,Big Ten,1473
+2026,regular,10,AP Top 25,6,Indiana,Big Ten,1446
+2026,regular,10,AP Top 25,7,BYU,Big 12,1358
+2026,regular,10,AP Top 25,8,Kentucky,SEC,1253
+2026,regular,10,AP Top 25,9,Alabama,SEC,1107
+2026,regular,10,AP Top 25,10,Texas,SEC,1057
+2026,regular,10,AP Top 25,11,Ohio State,Big Ten,1049
+2026,regular,10,AP Top 25,12,Ole Miss,SEC,953
+2026,regular,10,AP Top 25,13,Texas Tech,Big 12,931
+2026,regular,10,AP Top 25,14,Wake Forest,ACC,898
+2026,regular,10,AP Top 25,15,LSU,SEC,814
+2026,regular,10,AP Top 25,16,Tennessee,SEC,719
+2026,regular,10,AP Top 25,17,Houston,Big 12,590
+2026,regular,10,AP Top 25,18,USC,Big Ten,539
+2026,regular,10,AP Top 25,19,Missouri,SEC,475
+2026,regular,10,AP Top 25,20,Boise State,Pac-12,451
+2026,regular,10,AP Top 25,21,Iowa,Big Ten,401
+2026,regular,10,AP Top 25,22,New Mexico,Mountain West,179
+2026,regular,10,AP Top 25,23,South Carolina,SEC,163
+2026,regular,10,AP Top 25,24,Arizona,Big 12,154
+2026,regular,10,AP Top 25,25,Florida,SEC,94
+2026,regular,10,FCS Coaches Poll,1,Tarleton State,UAC,645
+2026,regular,10,FCS Coaches Poll,2,Stephen F. Austin,Southland,623
+2026,regular,10,FCS Coaches Poll,3,Montana State,Big Sky,593
+2026,regular,10,FCS Coaches Poll,4,Youngstown State,MVFC,574
+2026,regular,10,FCS Coaches Poll,5,South Dakota State,MVFC,549
+2026,regular,10,FCS Coaches Poll,6,Northern Arizona,Big Sky,507
+2026,regular,10,FCS Coaches Poll,7,Austin Peay,UAC,483
+2026,regular,10,FCS Coaches Poll,8,Illinois State,MVFC,445
+2026,regular,10,FCS Coaches Poll,9,Tennessee Tech,Southern,435
+2026,regular,10,FCS Coaches Poll,10,South Dakota,MVFC,421
+2026,regular,10,FCS Coaches Poll,11,Mercer,Southern,374
+2026,regular,10,FCS Coaches Poll,12,Lamar,Southland,364
+2026,regular,10,FCS Coaches Poll,13,Montana,Big Sky,338
+2026,regular,10,FCS Coaches Poll,14,Monmouth,Coastal Athletic,299
+2026,regular,10,FCS Coaches Poll,15,North Dakota,MVFC,281
+2026,regular,10,FCS Coaches Poll,16,Lehigh,Patriot,212
+2026,regular,10,FCS Coaches Poll,17,South Carolina State,MEAC,202
+2026,regular,10,FCS Coaches Poll,18,Idaho State,Big Sky,165
+2026,regular,10,FCS Coaches Poll,19,Campbell,Coastal Athletic,163
+2026,regular,10,FCS Coaches Poll,20,UAlbany,Coastal Athletic,157
+2026,regular,10,FCS Coaches Poll,21,East Tennessee State,Southern,138
+2026,regular,10,FCS Coaches Poll,22,Harvard,Ivy,124
+2026,regular,10,FCS Coaches Poll,22,Abilene Christian,UAC,124
+2026,regular,10,FCS Coaches Poll,24,Alabama A&M,SWAC,52
+2026,regular,10,FCS Coaches Poll,25,Weber State,Big Sky,50
+2026,regular,10,AFCA Division II Coaches Poll,1,Ferris State,GLIAC,749
+2026,regular,10,AFCA Division II Coaches Poll,2,Harding,Great American,719
+2026,regular,10,AFCA Division II Coaches Poll,3,CSU Pueblo,Rocky Mountain,676
+2026,regular,10,AFCA Division II Coaches Poll,4,Minnesota State,Northern Sun,663
+2026,regular,10,AFCA Division II Coaches Poll,5,Western Colorado,Rocky Mountain,612
+2026,regular,10,AFCA Division II Coaches Poll,6,Slippery Rock,Pennsylvania State Athletic,599
+2026,regular,10,AFCA Division II Coaches Poll,7,Northwood,Great Midwest Athletic,548
+2026,regular,10,AFCA Division II Coaches Poll,8,Northwest Missouri State,Mid America,538
+2026,regular,10,AFCA Division II Coaches Poll,9,Central Washington,Lone Star,481
+2026,regular,10,AFCA Division II Coaches Poll,10,Findlay,Great Midwest Athletic,434
+2026,regular,10,AFCA Division II Coaches Poll,11,Kutztown,Pennsylvania State Athletic,427
+2026,regular,10,AFCA Division II Coaches Poll,12,Davenport,GLIAC,396
+2026,regular,10,AFCA Division II Coaches Poll,13,Carson Newman,South Atlantic,393
+2026,regular,10,AFCA Division II Coaches Poll,14,Michigan Tech,GLIAC,344
+2026,regular,10,AFCA Division II Coaches Poll,15,Emporia State,Mid America,340
+2026,regular,10,AFCA Division II Coaches Poll,16,North Greenville,Carolinas,301
+2026,regular,10,AFCA Division II Coaches Poll,17,Valdosta State,Gulf South,277
+2026,regular,10,AFCA Division II Coaches Poll,18,East Stroudsburg,Pennsylvania State Athletic,255
+2026,regular,10,AFCA Division II Coaches Poll,19,Virginia Union,CIAA,235
+2026,regular,10,AFCA Division II Coaches Poll,20,Benedict,SIAC,201
+2026,regular,10,AFCA Division II Coaches Poll,21,Minnesota Duluth,Northern Sun,188
+2026,regular,10,AFCA Division II Coaches Poll,22,Augustana (SD),Northern Sun,79
+2026,regular,10,AFCA Division II Coaches Poll,23,Grand Valley State,GLIAC,74
+2026,regular,10,AFCA Division II Coaches Poll,24,Midwestern State,Lone Star,51
+2026,regular,10,AFCA Division II Coaches Poll,25,Wayne State (NE),Northern Sun,40
+2026,regular,10,AFCA Division III Coaches Poll,1,Wheaton (IL),CCIW,1300
+2026,regular,10,AFCA Division III Coaches Poll,2,Wisconsin Platteville,Wisconsin,1281
+2026,regular,10,AFCA Division III Coaches Poll,3,Saint John's (MN),Minnesota,1196
+2026,regular,10,AFCA Division III Coaches Poll,4,Wisconsin Whitewater,Wisconsin,1183
+2026,regular,10,AFCA Division III Coaches Poll,5,North Central College,CCIW,1115
+2026,regular,10,AFCA Division III Coaches Poll,6,Hardin Simmons,American Southwest,1051
+2026,regular,10,AFCA Division III Coaches Poll,7,Washington St. Louis,North Coast,986
+2026,regular,10,AFCA Division III Coaches Poll,8,Hope,Michigan,885
+2026,regular,10,AFCA Division III Coaches Poll,9,Christopher Newport,New Jersey,877
+2026,regular,10,AFCA Division III Coaches Poll,10,Endicott,Commonwealth Coast,870
+2026,regular,10,AFCA Division III Coaches Poll,11,SUNY Cortland,Empire 8,814
+2026,regular,10,AFCA Division III Coaches Poll,12,Wartburg,American Rivers,617
+2026,regular,10,AFCA Division III Coaches Poll,13,Mary Hardin Baylor,American Southwest,609
+2026,regular,10,AFCA Division III Coaches Poll,14,Baldwin Wallace,Ohio,606
+2026,regular,10,AFCA Division III Coaches Poll,15,Trinity (TX),Southern Athletic,574
+2026,regular,10,AFCA Division III Coaches Poll,16,Bethel (MN),Minnesota,478
+2026,regular,10,AFCA Division III Coaches Poll,17,DePauw,North Coast,463
+2026,regular,10,AFCA Division III Coaches Poll,18,Wisconsin River Falls,Wisconsin,461
+2026,regular,10,AFCA Division III Coaches Poll,19,Susquehanna,Landmark Conference,392
+2026,regular,10,AFCA Division III Coaches Poll,20,Calvin,Michigan,294
+2026,regular,10,AFCA Division III Coaches Poll,21,Lake Forest,Midwest,208
+2026,regular,10,AFCA Division III Coaches Poll,22,Springfield,NEWMAC,154
+2026,regular,10,AFCA Division III Coaches Poll,23,John Carroll,Ohio,141
+2026,regular,10,AFCA Division III Coaches Poll,24,Utica,Empire 8,128
+2026,regular,10,AFCA Division III Coaches Poll,25,Linfield,Northwest,94

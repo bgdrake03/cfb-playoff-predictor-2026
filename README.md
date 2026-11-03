@@ -11,22 +11,22 @@ committee's playoff field, applying the actual selection rules.
 ## Current prediction
 
 <!-- PREDICTION:START -->
-*Updated 2026-10-27 · ranking week 9 · champions are projected from current standings until title games are played.*
+*Updated 2026-11-03 · ranking week 10 · champions are projected from current standings until title games are played.*
 
 | Seed | Team | Conference | Record | Why they're in |
 |---:|---|---|---|---|
-| 1 | Indiana | Big Ten | 7-1 | at-large |
-| 2 | Miami | ACC | 7-0 | ACC champion |
-| 3 | Ohio State | Big Ten | 6-1 | Big Ten champion |
-| 4 | Kentucky | SEC | 7-1 | SEC champion |
-| 5 | Georgia | SEC | 6-1 | at-large |
-| 6 | Utah | Big 12 | 7-0 | Big 12 champion |
-| 7 | UCLA | Big Ten | 7-0 | at-large |
-| 8 | Texas | SEC | 5-2 | at-large |
-| 9 | Alabama | SEC | 6-2 | at-large |
-| 10 | Northwestern | Big Ten | 6-1 | at-large |
-| 11 | BYU | Big 12 | 6-1 | at-large |
-| 12 | Boise State | Pac-12 | 6-1 | highest-ranked other champion |
+| 1 | Indiana | Big Ten | 8-1 | at-large |
+| 2 | Miami | ACC | 8-0 | ACC champion |
+| 3 | Utah | Big 12 | 8-0 | Big 12 champion |
+| 4 | Georgia | SEC | 7-1 | SEC champion |
+| 5 | Kentucky | SEC | 7-1 | at-large |
+| 6 | Texas | SEC | 6-2 | at-large |
+| 7 | UCLA | Big Ten | 8-0 | Big Ten champion |
+| 8 | USC | Big Ten | 7-2 | at-large |
+| 9 | Ole Miss | SEC | 6-2 | at-large |
+| 10 | Alabama | SEC | 6-2 | at-large |
+| 11 | Ohio State | Big Ten | 6-2 | at-large |
+| 12 | Boise State | Pac-12 | 7-1 | highest-ranked other champion |
 
 Seeds 1–4 get first-round byes. 2026 seeding is assumed to follow the ranking (see Limitations).
 <!-- PREDICTION:END -->
