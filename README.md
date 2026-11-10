@@ -11,7 +11,7 @@ committee's playoff field, applying the actual selection rules.
 ## Current prediction
 
 <!-- PREDICTION:START -->
-*Updated 2026-11-03 · ranking week 10 · champions are projected from current standings until title games are played.*
+*Updated 2026-11-10 · ranking week 10 · champions are projected from current standings until title games are played.*
 
 | Seed | Team | Conference | Record | Why they're in |
 |---:|---|---|---|---|
