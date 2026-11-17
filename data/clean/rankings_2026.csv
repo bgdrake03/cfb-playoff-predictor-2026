@@ -274,6 +274,31 @@ season,seasonType,week,poll,rank,school,conference,points
 2026,regular,11,AP Top 25,23,New Mexico,Mountain West,301
 2026,regular,11,AP Top 25,24,LSU,SEC,277
 2026,regular,11,AP Top 25,25,SMU,ACC,118
+2026,regular,12,AP Top 25,1,Georgia,SEC,1734
+2026,regular,12,AP Top 25,2,Utah,Big 12,1677
+2026,regular,12,AP Top 25,3,Notre Dame,FBS Independents,1584
+2026,regular,12,AP Top 25,4,UCLA,Big Ten,1552
+2026,regular,12,AP Top 25,5,Miami,ACC,1426
+2026,regular,12,AP Top 25,6,Indiana,Big Ten,1384
+2026,regular,12,AP Top 25,7,Alabama,SEC,1297
+2026,regular,12,AP Top 25,8,Texas,SEC,1290
+2026,regular,12,AP Top 25,9,Tennessee,SEC,1179
+2026,regular,12,AP Top 25,10,Wake Forest,ACC,1134
+2026,regular,12,AP Top 25,11,Texas Tech,Big 12,1081
+2026,regular,12,AP Top 25,12,BYU,Big 12,1038
+2026,regular,12,AP Top 25,13,Iowa,Big Ten,861
+2026,regular,12,AP Top 25,14,Oregon,Big Ten,820
+2026,regular,12,AP Top 25,15,Boise State,Pac-12,767
+2026,regular,12,AP Top 25,16,Ohio State,Big Ten,661
+2026,regular,12,AP Top 25,17,Kentucky,SEC,599
+2026,regular,12,AP Top 25,18,USC,Big Ten,546
+2026,regular,12,AP Top 25,19,Arizona,Big 12,404
+2026,regular,12,AP Top 25,20,Houston,Big 12,365
+2026,regular,12,AP Top 25,21,Louisville,ACC,357
+2026,regular,12,AP Top 25,22,Liberty,Conference USA,183
+2026,regular,12,AP Top 25,23,Florida,SEC,173
+2026,regular,12,AP Top 25,24,Memphis,American Athletic,138
+2026,regular,12,AP Top 25,25,Ole Miss,SEC,103
 2026,regular,1,Coaches Poll,1,Ohio State,Big Ten,1741
 2026,regular,1,Coaches Poll,2,Oregon,Big Ten,1637
 2026,regular,1,Coaches Poll,3,Georgia,SEC,1591
@@ -550,6 +575,31 @@ season,seasonType,week,poll,rank,school,conference,points
 2026,regular,11,Coaches Poll,23,SMU,ACC,285
 2026,regular,11,Coaches Poll,24,South Carolina,SEC,267
 2026,regular,11,Coaches Poll,25,New Mexico,Mountain West,191
+2026,regular,12,Coaches Poll,1,Georgia,SEC,1802
+2026,regular,12,Coaches Poll,2,Utah,Big 12,1729
+2026,regular,12,Coaches Poll,3,Notre Dame,FBS Independents,1630
+2026,regular,12,Coaches Poll,4,UCLA,Big Ten,1594
+2026,regular,12,Coaches Poll,5,Indiana,Big Ten,1540
+2026,regular,12,Coaches Poll,6,Miami,ACC,1483
+2026,regular,12,Coaches Poll,7,Alabama,SEC,1364
+2026,regular,12,Coaches Poll,8,Texas,SEC,1303
+2026,regular,12,Coaches Poll,9,Tennessee,SEC,1209
+2026,regular,12,Coaches Poll,10,Wake Forest,ACC,1172
+2026,regular,12,Coaches Poll,11,Texas Tech,Big 12,1157
+2026,regular,12,Coaches Poll,12,BYU,Big 12,1057
+2026,regular,12,Coaches Poll,13,Iowa,Big Ten,927
+2026,regular,12,Coaches Poll,14,Oregon,Big Ten,783
+2026,regular,12,Coaches Poll,15,Boise State,Pac-12,714
+2026,regular,12,Coaches Poll,16,Ole Miss,SEC,705
+2026,regular,12,Coaches Poll,17,Ohio State,Big Ten,644
+2026,regular,12,Coaches Poll,18,Kentucky,SEC,592
+2026,regular,12,Coaches Poll,19,USC,Big Ten,534
+2026,regular,12,Coaches Poll,20,Arizona,Big 12,399
+2026,regular,12,Coaches Poll,21,Houston,Big 12,312
+2026,regular,12,Coaches Poll,22,Louisville,ACC,235
+2026,regular,12,Coaches Poll,23,LSU,SEC,160
+2026,regular,12,Coaches Poll,24,Duke,ACC,123
+2026,regular,12,Coaches Poll,25,Florida,SEC,95
 2026,regular,10,Playoff Committee Rankings,1,Miami,ACC,0
 2026,regular,10,Playoff Committee Rankings,2,Georgia,SEC,0
 2026,regular,10,Playoff Committee Rankings,3,Utah,Big 12,0
@@ -575,3 +625,28 @@ season,seasonType,week,poll,rank,school,conference,points
 2026,regular,10,Playoff Committee Rankings,23,Oregon,Big Ten,0
 2026,regular,10,Playoff Committee Rankings,24,Florida,SEC,0
 2026,regular,10,Playoff Committee Rankings,25,Boise State,Pac-12,0
+2026,regular,11,Playoff Committee Rankings,1,Georgia,SEC,0
+2026,regular,11,Playoff Committee Rankings,2,Utah,Big 12,0
+2026,regular,11,Playoff Committee Rankings,3,Alabama,SEC,0
+2026,regular,11,Playoff Committee Rankings,4,UCLA,Big Ten,0
+2026,regular,11,Playoff Committee Rankings,5,Notre Dame,FBS Independents,0
+2026,regular,11,Playoff Committee Rankings,6,Texas,SEC,0
+2026,regular,11,Playoff Committee Rankings,7,Miami,ACC,0
+2026,regular,11,Playoff Committee Rankings,8,Tennessee,SEC,0
+2026,regular,11,Playoff Committee Rankings,9,Indiana,Big Ten,0
+2026,regular,11,Playoff Committee Rankings,10,BYU,Big 12,0
+2026,regular,11,Playoff Committee Rankings,11,Kentucky,SEC,0
+2026,regular,11,Playoff Committee Rankings,12,Texas Tech,Big 12,0
+2026,regular,11,Playoff Committee Rankings,13,Wake Forest,ACC,0
+2026,regular,11,Playoff Committee Rankings,14,Houston,Big 12,0
+2026,regular,11,Playoff Committee Rankings,15,Iowa,Big Ten,0
+2026,regular,11,Playoff Committee Rankings,16,Oregon,Big Ten,0
+2026,regular,11,Playoff Committee Rankings,17,South Carolina,SEC,0
+2026,regular,11,Playoff Committee Rankings,18,USC,Big Ten,0
+2026,regular,11,Playoff Committee Rankings,19,Ole Miss,SEC,0
+2026,regular,11,Playoff Committee Rankings,20,Ohio State,Big Ten,0
+2026,regular,11,Playoff Committee Rankings,21,LSU,SEC,0
+2026,regular,11,Playoff Committee Rankings,22,Missouri,SEC,0
+2026,regular,11,Playoff Committee Rankings,23,Arizona,Big 12,0
+2026,regular,11,Playoff Committee Rankings,24,Boise State,Pac-12,0
+2026,regular,11,Playoff Committee Rankings,25,Oklahoma State,Big 12,0

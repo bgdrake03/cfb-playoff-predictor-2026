@@ -3,3 +3,4 @@ id,season,week,seasonType,startDate,startTimeTBD,completed,neutralSite,conferenc
 401908553,2026,1,regular,2026-09-05T23:00:00.000Z,False,True,False,False,,10465.0,Mayo Field,101442,Centenary (LA),iii,Southern Collegiate Athletic,,,,,,134087,Westgate Christian University,,,,,,,,,,,,completed_but_missing_score
 401873229,2026,2,regular,2026-09-12T17:00:00.000Z,False,True,False,False,,6104.0,Baker Stadium,2508,Puget Sound,iii,Northwest,,,,,,134423,Lewis-Clark Valley College,,,,,,,,,,,,completed_but_missing_score
 401908370,2026,7,regular,2026-10-17T17:00:00.000Z,False,True,False,False,,5996.0,Wilford Moore Stadium,241,McMurry,iii,American Southwest,,,,,,134087,Westgate Christian University,,,,,,,,,,,,completed_but_missing_score
+401873412,2026,11,regular,2026-11-14T05:00:00.000Z,True,True,False,True,,5824.0,Lions Stadium,2442,The College of New Jersey,iii,New Jersey,,,,,,2871,Kean,iii,New Jersey,,,,,,,,,,completed_but_missing_score
