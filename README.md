@@ -11,22 +11,22 @@ committee's playoff field, applying the actual selection rules.
 ## Current prediction
 
 <!-- PREDICTION:START -->
-*Updated 2026-11-22 · ranking week 12 · champions are projected from current standings until title games are played.*
+*Updated 2026-11-22 · ranking week 13 · champions are projected from current standings until title games are played.*
 
 | Seed | Team | Conference | Record | Why they're in |
 |---:|---|---|---|---|
 | 1 | Utah | Big 12 | 10-0 | Big 12 champion |
 | 2 | Georgia | SEC | 9-1 | SEC champion |
-| 3 | Indiana | Big Ten | 9-1 | at-large |
-| 4 | Texas | SEC | 8-2 | at-large |
-| 5 | Miami | ACC | 9-1 | ACC champion |
-| 6 | UCLA | Big Ten | 10-0 | Big Ten champion |
-| 7 | Alabama | SEC | 8-2 | at-large |
-| 8 | Notre Dame | FBS Independents | 9-1 | Notre Dame (ranked top 12) |
-| 9 | Wake Forest | ACC | 9-1 | at-large |
-| 10 | Tennessee | SEC | 8-2 | at-large |
-| 11 | Boise State | Pac-12 | 9-1 | highest-ranked other champion |
-| 12 | Oregon | Big Ten | 7-3 | at-large |
+| 3 | Texas | SEC | 9-2 | at-large |
+| 4 | Miami | ACC | 9-1 | ACC champion |
+| 5 | Alabama | SEC | 9-2 | at-large |
+| 6 | Notre Dame | FBS Independents | 9-1 | Notre Dame (ranked top 12) |
+| 7 | Tennessee | SEC | 9-2 | at-large |
+| 8 | Indiana | Big Ten | 9-2 | at-large |
+| 9 | Wake Forest | ACC | 10-1 | at-large |
+| 10 | UCLA | Big Ten | 10-1 | Big Ten champion |
+| 11 | Oregon | Big Ten | 8-3 | at-large |
+| 12 | Boise State | Pac-12 | 9-1 | highest-ranked other champion |
 
 Seeds 1–4 get first-round byes. 2026 seeding is assumed to follow the ranking (see Limitations).
 <!-- PREDICTION:END -->

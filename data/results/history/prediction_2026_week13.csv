@@ -1,0 +1,13 @@
+seed,team,conference,record,reason,rank
+1,Utah,Big 12,10-0,Big 12 champion,1.0
+2,Georgia,SEC,9-1,SEC champion,2.0
+3,Texas,SEC,9-2,at-large,3.0
+4,Miami,ACC,9-1,ACC champion,4.0
+5,Alabama,SEC,9-2,at-large,5.0
+6,Notre Dame,FBS Independents,9-1,Notre Dame (ranked top 12),6.0
+7,Tennessee,SEC,9-2,at-large,7.0
+8,Indiana,Big Ten,9-2,at-large,8.0
+9,Wake Forest,ACC,10-1,at-large,9.0
+10,UCLA,Big Ten,10-1,Big Ten champion,10.0
+11,Oregon,Big Ten,8-3,at-large,11.0
+12,Boise State,Pac-12,9-1,highest-ranked other champion,13.0
