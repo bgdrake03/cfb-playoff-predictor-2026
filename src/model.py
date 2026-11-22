@@ -48,6 +48,12 @@ FIELD_SIZE = 12
 UNRANKED_SCORE = 0
 
 
+def finished_seasons(df: pd.DataFrame) -> pd.DataFrame:
+    """Seasons that are over (postseason played). An in-progress season has no Selection Day
+    list yet, so it must never be used to train or to score the model."""
+    return df[(df["season_complete"] == 1) & ~df["season"].isin(EXCLUDED_SEASONS)]
+
+
 def load_features() -> pd.DataFrame:
     frames = [pd.read_csv(f) for f in sorted(FEATURE_DIR.glob("features_*.csv"))]
     return pd.concat(frames, ignore_index=True)
@@ -154,7 +160,7 @@ def baseline_scores(week_df: pd.DataFrame) -> dict[str, pd.Series]:
 def backtest(df: pd.DataFrame, features: list[str] = None, make=None) -> pd.DataFrame:
     features = features or FEATURES
     make = make or make_models
-    df = add_target(df[~df["season"].isin(EXCLUDED_SEASONS)])
+    df = add_target(finished_seasons(df))
     labeled = df[df["committee_rank"].notna() | df.groupby(["season", "ranking_week"])["committee_rank"].transform(lambda s: s.notna().any())]
     seasons = sorted(labeled["season"].unique())
     rows = []
@@ -215,7 +221,7 @@ def backtest_field(df: pd.DataFrame) -> pd.DataFrame:
     The true field = the rules applied to the committee's own final ranking.
     Champions are known by Selection Day, so using them here is fair.
     """
-    df = add_target(df[~df["season"].isin(EXCLUDED_SEASONS)])
+    df = add_target(finished_seasons(df))
     seasons = sorted(df.loc[df["committee_rank"].notna(), "season"].unique())
     rows = []
     for test_season in [s for s in seasons if s >= FIRST_TEST_SEASON]:
@@ -239,7 +245,7 @@ def backtest_field(df: pd.DataFrame) -> pd.DataFrame:
 # ---------- predict the current season ----------
 
 def predict_current(df: pd.DataFrame, model_name: str = "blend", window: int | None = None) -> pd.DataFrame:
-    train_df = add_target(df[~df["season"].isin(EXCLUDED_SEASONS)])
+    train_df = add_target(finished_seasons(df))
     current_season = int(df["season"].max())
     train_seasons = sorted(s for s in train_df["season"].unique() if s < current_season and train_df[train_df["season"] == s]["committee_rank"].notna().any())
     if window:

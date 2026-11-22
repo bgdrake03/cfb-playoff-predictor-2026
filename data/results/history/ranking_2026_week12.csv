@@ -1,0 +1,26 @@
+predicted_seed,team,conference,wins,losses,sos,quality_wins,elo_current,ref_ap_rank,conf_champion
+1,Utah,Big 12,10,0,1545.3,1,1913.0,2.0,1
+2,Georgia,SEC,9,1,1662.3,5,2160.0,1.0,1
+3,Indiana,Big Ten,9,1,1592.3,4,2061.0,6.0,0
+4,Texas,SEC,8,2,1737.4,5,1952.0,8.0,0
+5,Miami,ACC,9,1,1561.2,1,1996.0,5.0,1
+6,UCLA,Big Ten,10,0,1521.0,1,1757.0,4.0,1
+7,Alabama,SEC,8,2,1703.8,3,1979.0,7.0,0
+8,Notre Dame,FBS Independents,9,1,1469.1,1,2090.0,3.0,0
+9,Wake Forest,ACC,9,1,1464.5,1,1986.0,10.0,0
+10,Tennessee,SEC,8,2,1625.6,1,1898.0,9.0,0
+11,Boise State,Pac-12,9,1,1492.0,0,1719.0,15.0,1
+12,Oregon,Big Ten,7,3,1625.6,4,1890.0,14.0,0
+13,BYU,Big 12,8,2,1611.6,1,1755.0,12.0,0
+14,Iowa,Big Ten,8,2,1596.0,3,1926.0,13.0,0
+15,Texas Tech,Big 12,9,1,1421.8,1,1864.0,11.0,0
+16,Ohio State,Big Ten,7,3,1624.6,2,1966.0,16.0,0
+17,USC,Big Ten,7,3,1684.9,3,1795.0,18.0,0
+18,Kentucky,SEC,7,3,1662.8,3,1572.0,17.0,0
+19,Ole Miss,SEC,6,4,1713.1,3,1860.0,25.0,0
+20,Oklahoma,SEC,6,4,1673.9,2,1729.0,,0
+21,Florida,SEC,6,4,1659.7,2,1608.0,23.0,0
+22,LSU,SEC,6,4,1681.1,2,1899.0,,0
+23,South Carolina,SEC,6,4,1590.2,1,1646.0,,0
+24,Arizona,Big 12,7,3,1558.9,0,1800.0,19.0,0
+25,Auburn,SEC,6,4,1691.8,2,1696.0,,0

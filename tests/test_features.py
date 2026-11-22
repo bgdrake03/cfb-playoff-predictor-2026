@@ -117,3 +117,23 @@ def test_known_conference_champions_are_detected(year):
 def test_at_most_one_champion_per_conference(features):
     champs = features[features["conf_champion"] == 1]
     assert not champs.duplicated(["ranking_week", "conference"]).any()
+
+
+# ---------- freshness: the latest snapshot must use every game we have ----------
+
+def test_in_progress_season_has_a_snapshot_with_all_games_played(features, season):
+    """Regression test: once the committee started publishing, the newest snapshot used to lag
+    a full week behind the data. An in-progress season's latest snapshot must include every
+    regular-season game already in the clean data."""
+    if features["season_complete"].iloc[0] == 1:
+        pytest.skip("Season is finished; snapshots follow the committee's weeks")
+    games = pd.read_csv(CLEAN_DIR / f"team_games_{season}.csv")
+    played = games[games["season_type"] == "regular"].groupby("team").size()
+    latest = features[features["ranking_week"] == features["ranking_week"].max()].set_index("team")["games"]
+    assert (latest == played.reindex(latest.index)).all()
+
+
+def test_finished_seasons_are_flagged_complete():
+    for year in range(2014, 2026):
+        flag = pd.read_csv(FEATURE_DIR / f"features_{year}.csv")["season_complete"]
+        assert (flag == 1).all(), year

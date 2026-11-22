@@ -171,24 +171,32 @@ def snapshot(games: pd.DataFrame) -> pd.DataFrame:
     return out.reset_index()
 
 
-def ranking_weeks(year: int, ranks: pd.DataFrame, games: pd.DataFrame) -> list[int]:
-    """Which ranking weeks to build snapshots for."""
+def ranking_weeks(year: int, ranks: pd.DataFrame, games: pd.DataFrame, in_progress: bool) -> list[int]:
+    """Which ranking weeks to build snapshots for.
+
+    Finished seasons: the committee's weeks. A season in progress also gets a "right now"
+    snapshot (every game played so far), because the committee's latest list always trails the
+    most recent results by about a week.
+    """
     committee = ranks[(ranks["poll"] == COMMITTEE) & (ranks["season_type"] == "regular")]
-    if not committee.empty:
-        return sorted(committee["week"].unique())
-    # Season still in progress (no committee list yet): every AP week plus the next one.
-    ap_weeks = set(ranks.loc[ranks["poll"] == "AP Top 25", "week"]) - {1}
-    played = games[games["season_type"] == "regular"]["week"]
-    return sorted(ap_weeks | {int(played.max()) + 1})
+    weeks = set(committee["week"])
+    if not weeks:
+        weeks = set(ranks.loc[ranks["poll"] == "AP Top 25", "week"]) - {1}
+    if in_progress:
+        played = games[games["season_type"] == "regular"]["week"]
+        weeks.add(int(played.max()) + 1)
+    return sorted(weeks)
 
 
 def build_year(year: int) -> pd.DataFrame:
     games = add_game_quality(pd.read_csv(CLEAN_DIR / f"team_games_{year}.csv"))
     ranks = pd.read_csv(CLEAN_DIR / f"rankings_{year}.csv").rename(columns={"seasonType": "season_type"})
     regular = games[games["season_type"] == "regular"]
+    # No postseason games played yet means the season is still going.
+    in_progress = not (games["season_type"] == "postseason").any()
 
     frames = []
-    for week in ranking_weeks(year, ranks, games):
+    for week in ranking_weeks(year, ranks, games, in_progress):
         cutoff = regular[regular["week"] <= week - 1]
         if (year, week) in DATE_CUTOFFS:
             cutoff = cutoff[cutoff["start_date"].str[:10] < DATE_CUTOFFS[(year, week)]]
@@ -212,6 +220,7 @@ def build_year(year: int) -> pd.DataFrame:
         frames.append(snap)
 
     result = pd.concat(frames, ignore_index=True)
+    result["season_complete"] = int(not in_progress)
     result["in_committee_top12"] = (result["committee_rank"] <= 12).astype(int)
     return result
 

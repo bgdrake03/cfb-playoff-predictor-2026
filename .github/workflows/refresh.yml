@@ -2,8 +2,10 @@ name: Refresh data
 
 on:
   schedule:
-    # Tuesdays 12:00 UTC: weekend games are final and the new polls are out
-    - cron: "0 12 * * 2"
+    # Sundays 09:00 UTC (~5am ET): Saturday's games are final, so scores are at most a day old
+    - cron: "0 9 * * 0"
+    # Wednesdays 12:00 UTC: the committee releases its list Tuesday evening, so this catches it
+    - cron: "0 12 * * 3"
   workflow_dispatch:  # lets you run it manually from the Actions tab
 
 permissions:
