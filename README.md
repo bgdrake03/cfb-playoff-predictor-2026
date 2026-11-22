@@ -61,44 +61,44 @@ automatic spots, then the highest-ranked remaining teams.
 
 | Seed | Team | Conference | Record | Why they're in |
 |---:|---|---|---|---|
-| 1 | Georgia | SEC | 10-1 | SEC champion |
-| 2 | Utah | Big 12 | 10-0 | Big 12 champion |
+| 1 | Utah | Big 12 | 11-0 | Big 12 champion |
+| 2 | Georgia | SEC | 10-1 | SEC champion |
 | 3 | Texas | SEC | 9-2 | at-large |
 | 4 | Miami | ACC | 10-1 | ACC champion |
 | 5 | Notre Dame | FBS Independents | 10-1 | Notre Dame (ranked top 12) |
 | 6 | Alabama | SEC | 9-2 | at-large |
-| 7 | Tennessee | SEC | 9-2 | at-large |
-| 8 | Indiana | Big Ten | 9-2 | at-large |
+| 7 | Indiana | Big Ten | 9-2 | at-large |
+| 8 | Tennessee | SEC | 9-2 | at-large |
 | 9 | Wake Forest | ACC | 10-1 | at-large |
-| 10 | UCLA | Big Ten | 10-1 | Big Ten champion |
-| 11 | Texas Tech | Big 12 | 10-1 | at-large |
-| 12 | Boise State | Pac-12 | 9-1 | highest-ranked other champion |
+| 10 | Oregon | Big Ten | 8-3 | at-large |
+| 11 | UCLA | Big Ten | 10-1 | Big Ten champion |
+| 12 | Boise State | Pac-12 | 9-2 | highest-ranked other champion |
 
 Seeds 1–4 get first-round byes. 2026 seeding is assumed to follow the ranking (see Limitations).
 
 **Why these 12?**
 
-- **Automatic spots** go to conference champions, no matter how they rank: Georgia (SEC champion), Utah (Big 12 champion), Miami (ACC champion), Notre Dame (ranked top 12), UCLA (Big Ten champion), Boise State (highest-ranked other champion). Until the conference title games are played, each "champion" here is just the current leader.
+- **Automatic spots** go to conference champions, no matter how they rank: Utah (Big 12 champion), Georgia (SEC champion), Miami (ACC champion), Notre Dame (ranked top 12), UCLA (Big Ten champion), Boise State (highest-ranked other champion). Until the conference title games are played, each "champion" here is just the current leader.
 - **The remaining spots** go to the highest-ranked teams (by the model) that aren't already in.
-- An automatic spot can beat a better-ranked team: Boise State (ranked 13th) is in on the champion rule alone, which takes a spot from an at-large team.
-- **The closest call:** **Texas Tech** (10-1) is the last team in; **Oregon** (8-3) is the first team out. Texas Tech has fewer losses (1 vs 3) and bigger typical winning margins. Oregon has a harder schedule (12th vs 79th hardest) and more big wins (3 vs 1).
+- An automatic spot can beat a better-ranked team: Boise State (ranked 18th) is in on the champion rule alone, which takes a spot from an at-large team.
+- **The closest call:** **Oregon** (8-3) is the last team in; **Texas Tech** (10-1) is the first team out. Oregon has a harder schedule (12th vs 80th hardest) and more big wins (4 vs 1). Texas Tech has fewer losses (1 vs 3) and bigger typical winning margins.
 
 <details><summary>Each team's résumé</summary>
 
 | Seed | Team | Résumé |
 |---:|---|---|
-| 1 | Georgia | 10-1, 24th-hardest schedule of 138, 4 big wins (best: Alabama) |
-| 2 | Utah | 10-0, 57th-hardest schedule of 138, 2 big wins (best: Arizona) |
+| 1 | Utah | 11-0, 57th-hardest schedule of 138, 2 big wins (best: Arizona) |
+| 2 | Georgia | 10-1, 22nd-hardest schedule of 138, 4 big wins (best: Alabama) |
 | 3 | Texas | 9-2, 2nd-hardest schedule of 138, 5 big wins (best: Ohio State) |
-| 4 | Miami | 10-1, 37th-hardest schedule of 138, 2 big wins (best: Wake Forest) |
-| 5 | Notre Dame | 10-1, 56th-hardest schedule of 138, 2 big wins (best: Miami) |
-| 6 | Alabama | 9-2, 16th-hardest schedule of 138, 1 big win (best: LSU) |
-| 7 | Tennessee | 9-2, 21st-hardest schedule of 138, 2 big wins (best: Alabama) |
-| 8 | Indiana | 9-2, 31st-hardest schedule of 138, 2 big wins (best: USC) |
-| 9 | Wake Forest | 10-1, 87th-hardest schedule of 138, 1 big win (best: Louisville) |
-| 10 | UCLA | 10-1, 75th-hardest schedule of 138, 2 big wins (best: Oregon) |
-| 11 | Texas Tech | 10-1, 79th-hardest schedule of 138, 1 big win (best: Arizona) |
-| 12 | Boise State | 9-1, 59th-hardest schedule of 138, 0 big wins |
+| 4 | Miami | 10-1, 40th-hardest schedule of 138, 2 big wins (best: Wake Forest) |
+| 5 | Notre Dame | 10-1, 58th-hardest schedule of 138, 1 big win (best: Miami) |
+| 6 | Alabama | 9-2, 17th-hardest schedule of 138, 1 big win (best: LSU) |
+| 7 | Indiana | 9-2, 31st-hardest schedule of 138, 3 big wins (best: USC) |
+| 8 | Tennessee | 9-2, 19th-hardest schedule of 138, 2 big wins (best: Alabama) |
+| 9 | Wake Forest | 10-1, 83rd-hardest schedule of 138, 1 big win (best: Louisville) |
+| 10 | Oregon | 8-3, 12th-hardest schedule of 138, 4 big wins (best: Ohio State) |
+| 11 | UCLA | 10-1, 74th-hardest schedule of 138, 1 big win (best: Oregon) |
+| 12 | Boise State | 9-2, 69th-hardest schedule of 138, 0 big wins |
 
 *Big win = a win over a team in the top fifth of the sport by power rating.*
 </details>
@@ -118,32 +118,32 @@ committee's last list. It is saved before the list is released, then scored belo
 
 | Predicted rank | Team | Record | Committee's last rank |
 |---:|---|---|---:|
-| 1 | Utah | 10-0 | 2 |
+| 1 | Utah | 11-0 | 2 |
 | 2 | Georgia | 10-1 | 1 |
 | 3 | Texas | 9-2 | 5 |
 | 4 | Miami | 10-1 | 7 |
 | 5 | Notre Dame | 10-1 | 6 |
 | 6 | Alabama | 9-2 | 3 |
-| 7 | Tennessee | 9-2 | 9 |
-| 8 | UCLA | 10-1 | 4 |
+| 7 | Indiana | 9-2 | 8 |
+| 8 | Tennessee | 9-2 | 9 |
 | 9 | Wake Forest | 10-1 | 11 |
-| 10 | Indiana | 9-2 | 8 |
+| 10 | UCLA | 10-1 | 4 |
 | 11 | Texas Tech | 10-1 | 12 |
 | 12 | BYU | 9-2 | 10 |
 | 13 | Oregon | 8-3 | 13 |
-| 14 | Boise State | 9-1 | 17 |
-| 15 | Iowa | 9-2 | 15 |
+| 14 | Iowa | 9-2 | 15 |
+| 15 | USC | 8-3 | 18 |
 
 **Why does the forecast look like this?**
 
 - The committee rarely changes its mind much, so the forecast starts from its last list. 9 of the top 12 are predicted to land within two spots of where the committee already had them (0 in the exact same spot).
 - Then it adjusts for this week's results. The biggest expected moves in the top 25:
+  - **UCLA** down 6 to 10 (was 4): lost 16-18 at Michigan.
   - **Ole Miss** up 5 to 20 (was 25): won 59-17 vs Wofford.
-  - **UCLA** down 4 to 8 (was 4): lost 16-18 at Michigan.
   - **Houston** down 4 to 24 (was 20): won 34-31 at West Virginia.
-  - **Miami** up 3 to 4 (was 7): won 28-20 vs Virginia Tech.
-  - **Boise State** up 3 to 14 (was 17): won 46-41 vs Oregon State.
   - **Alabama** down 3 to 6 (was 3): won 47-0 vs Chattanooga.
+  - **Miami** up 3 to 4 (was 7): won 28-20 vs Virginia Tech.
+  - **Oklahoma** up 3 to 19 (was 22): won 28-7 vs Texas A&M.
 
 **Scored forecasts** (top 12 correct out of 12):
 
@@ -166,28 +166,28 @@ the final games matter.
 
 | Team | Record | Games left | Makes the field | If they win out | If they lose at least once | First-round bye | Wins conference |
 |---|---|---:|---:|---:|---:|---:|---:|
-| Georgia | 10-1 | 1 | **100%** | 100% | – | 99% | 67% |
-| Texas | 9-2 | 1 | **100%** | 100% | 100% | 78% | 27% |
-| Notre Dame | 10-1 | 1 | **100%** | 100% | – | 9% | 0% |
-| Miami | 10-1 | 1 | **98%** | 100% | 48% | 45% | 47% |
-| Alabama | 9-2 | 1 | **91%** | 100% | 52% | 5% | 5% |
-| Utah | 10-0 | 2 | **90%** | 100% | 70% | 61% | 53% |
-| Wake Forest | 10-1 | 1 | **90%** | 100% | 49% | 43% | 53% |
-| Tennessee | 9-2 | 1 | **81%** | 100% | 19% | 1% | 1% |
-| Indiana | 9-2 | 1 | **78%** | 79% | – | 46% | 68% |
-| Iowa | 9-2 | 1 | **72%** | 95% | 0% | 2% | 3% |
-| BYU | 9-2 | 1 | **63%** | 73% | 0% | 0% | 0% |
-| Oregon | 8-3 | 1 | **55%** | 70% | 0% | 10% | 17% |
-| Boise State | 9-1 | 1 | **51%** | 52% | 43% | 0% | 51% |
-| Texas Tech | 10-1 | 1 | **51%** | 54% | 38% | 0% | 47% |
-| UCLA | 10-1 | 1 | **18%** | 35% | 2% | 0% | 12% |
-| Liberty | 10-1 | 1 | **18%** | 19% | 0% | 0% | 83% |
-| New Mexico | 9-2 | 1 | **13%** | 19% | 0% | 0% | 62% |
-| USC | 8-3 | 1 | **12%** | 25% | 0% | 0% | 0% |
-| UTSA | 8-2 | 2 | **8%** | 20% | 3% | 0% | 18% |
-| Texas State | 7-4 | 0 | **4%** | – | – | 0% | 49% |
-| James Madison | 8-3 | 1 | **3%** | 3% | 0% | 0% | 22% |
-| Air Force | 9-2 | 1 | **2%** | 6% | 0% | 0% | 4% |
+| Georgia | 10-1 | 1 | **100%** | 100% | – | 99% | 66% |
+| Texas | 9-2 | 1 | **100%** | 100% | 100% | 73% | 27% |
+| Notre Dame | 10-1 | 1 | **100%** | 100% | – | 3% | 0% |
+| Utah | 11-0 | 1 | **97%** | 100% | 45% | 75% | 57% |
+| Miami | 10-1 | 2 | **96%** | 100% | 92% | 62% | 48% |
+| Alabama | 9-2 | 1 | **95%** | 100% | 69% | 6% | 6% |
+| Tennessee | 9-2 | 1 | **88%** | 100% | 39% | 0% | 1% |
+| Indiana | 9-2 | 1 | **82%** | 84% | – | 49% | 66% |
+| Wake Forest | 10-1 | 2 | **71%** | 100% | 50% | 28% | 52% |
+| Iowa | 9-2 | 1 | **71%** | 96% | 1% | 2% | 4% |
+| Oregon | 8-3 | 1 | **59%** | 74% | 1% | 4% | 18% |
+| BYU | 9-2 | 1 | **54%** | 65% | 0% | 0% | 0% |
+| Boise State | 9-2 | 2 | **47%** | 50% | 30% | 0% | 48% |
+| Texas Tech | 10-1 | 1 | **45%** | 46% | 41% | 0% | 43% |
+| UCLA | 10-1 | 1 | **23%** | 43% | 2% | 0% | 13% |
+| USC | 8-3 | 1 | **20%** | 42% | 0% | 0% | 0% |
+| UTSA | 9-2 | 1 | **15%** | 23% | 4% | 0% | 26% |
+| New Mexico | 9-2 | 1 | **14%** | 21% | 0% | 0% | 58% |
+| Texas State | 7-4 | 1 | **11%** | 13% | 5% | 0% | 52% |
+| James Madison | 8-3 | 1 | **6%** | 6% | 0% | 0% | 21% |
+| Air Force | 9-2 | 1 | **5%** | 17% | 0% | 0% | 13% |
+| Liberty | 10-1 | 2 | **2%** | 3% | 0% | 0% | 81% |
 
 These capture game-to-game luck only; they assume the model's ranking is what the committee will do.
 In backtests they were accurate at the extremes and mildly overconfident in the middle (see below).
@@ -195,12 +195,13 @@ In backtests they were accurate at the extremes and mildly overconfident in the 
 **What do these odds depend on?**
 
 - **Nearly locked in (99%+):** Georgia, Texas, Notre Dame. Even a bad finish probably wouldn't cost them.
-- **Texas Tech** (10-1, 1 game left): 51% overall, **54% if they win out**, 38% if they lose at least once.
-- **Boise State** (9-1, 1 game left): 51% overall, **52% if they win out**, 43% if they lose at least once.
-- **Oregon** (8-3, 1 game left): 55% overall, **70% if they win out**, 0% if they lose at least once.
-- **BYU** (9-2, 1 game left): 63% overall, **73% if they win out**, 0% if they lose at least once.
-- **Iowa** (9-2, 1 game left): 72% overall, **95% if they win out**, 0% if they lose at least once.
-- **Long shots that could sneak in by winning their conference:** Texas State, Memphis, Louisiana Tech. Under the 2026 rules the best champion from outside the big four conferences gets an automatic spot.
+- **Boise State** (9-2, 2 games left): 47% overall, **50% if they win out**, 30% if they lose at least once.
+- **BYU** (9-2, 1 game left): 54% overall, **65% if they win out**, 0% if they lose at least once.
+- **Texas Tech** (10-1, 1 game left): 45% overall, **46% if they win out**, 41% if they lose at least once.
+- **Oregon** (8-3, 1 game left): 59% overall, **74% if they win out**, 1% if they lose at least once.
+- **Iowa** (9-2, 1 game left): 71% overall, **96% if they win out**, 1% if they lose at least once.
+- **Wake Forest** (10-1, 2 games left): 71% overall, **100% if they win out**, 50% if they lose at least once.
+- **Long shots that could sneak in by winning their conference:** Liberty. Under the 2026 rules the best champion from outside the big four conferences gets an automatic spot.
 - Teams in the middle are the ones whose last games decide the field. Teams near 0% or 100% mostly won't move.
 <!-- SIMULATION:END -->
 
