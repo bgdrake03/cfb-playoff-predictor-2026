@@ -57,29 +57,28 @@ CFBD API ──► ingest ──► clean ──► features ──► model ─
 
 | Team | Record | Games left | Makes the field | First-round bye | Wins conference |
 |---|---|---:|---:|---:|---:|
-| Texas | 9-2 | 1 | 100% | 77% | 31% |
-| Georgia | 9-1 | 2 | 100% | 94% | 61% |
-| Notre Dame | 9-1 | 2 | 98% | 8% | 0% |
-| Miami | 9-1 | 2 | 95% | 46% | 47% |
-| Alabama | 9-2 | 1 | 92% | 10% | 8% |
-| Utah | 10-0 | 2 | 92% | 60% | 53% |
-| Wake Forest | 10-1 | 1 | 88% | 40% | 53% |
-| Tennessee | 9-2 | 1 | 84% | 1% | 1% |
-| Indiana | 9-2 | 1 | 76% | 48% | 61% |
-| Iowa | 9-2 | 1 | 70% | 3% | 3% |
-| Oregon | 8-3 | 1 | 63% | 12% | 20% |
-| BYU | 9-2 | 1 | 54% | 0% | 0% |
-| Texas Tech | 10-1 | 1 | 50% | 0% | 47% |
+| Georgia | 9-1 | 2 | 100% | 91% | 60% |
+| Texas | 9-2 | 1 | 100% | 78% | 32% |
+| Notre Dame | 9-1 | 2 | 100% | 9% | 0% |
+| Miami | 9-1 | 2 | 96% | 48% | 49% |
+| Alabama | 9-2 | 1 | 95% | 9% | 8% |
+| Utah | 10-0 | 2 | 92% | 61% | 55% |
+| Wake Forest | 10-1 | 1 | 88% | 37% | 51% |
+| Tennessee | 9-2 | 1 | 79% | 1% | 0% |
+| Indiana | 9-2 | 1 | 76% | 51% | 63% |
+| Iowa | 9-2 | 1 | 70% | 2% | 3% |
+| Oregon | 8-3 | 1 | 61% | 12% | 20% |
+| BYU | 9-2 | 1 | 55% | 0% | 0% |
 | Boise State | 9-1 | 1 | 50% | 0% | 50% |
-| UCLA | 10-1 | 1 | 26% | 0% | 15% |
-| Liberty | 10-1 | 1 | 17% | 0% | 82% |
-| New Mexico | 9-2 | 1 | 16% | 0% | 62% |
-| USC | 8-3 | 1 | 13% | 0% | 0% |
-| UTSA | 8-2 | 2 | 7% | 0% | 18% |
-| Texas State | 7-4 | 0 | 4% | 0% | 50% |
-| Memphis | 8-3 | 1 | 3% | 0% | 55% |
-| Air Force | 9-2 | 1 | 2% | 0% | 5% |
-| James Madison | 8-3 | 1 | 2% | 0% | 26% |
+| Texas Tech | 10-1 | 1 | 50% | 0% | 45% |
+| UCLA | 10-1 | 1 | 24% | 0% | 14% |
+| Liberty | 10-1 | 1 | 18% | 0% | 84% |
+| USC | 8-3 | 1 | 15% | 0% | 0% |
+| New Mexico | 9-2 | 1 | 15% | 0% | 59% |
+| UTSA | 8-2 | 2 | 7% | 0% | 16% |
+| Texas State | 7-4 | 0 | 5% | 0% | 50% |
+| James Madison | 8-3 | 1 | 4% | 0% | 21% |
+| Air Force | 9-2 | 1 | 1% | 0% | 4% |
 
 These capture game-to-game luck only; they assume the model's ranking is what the committee will do.
 In backtests they were accurate at the extremes and mildly overconfident in the middle (see below).
