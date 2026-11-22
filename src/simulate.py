@@ -28,16 +28,13 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from src.features import FCS_ELO, add_game_quality, snapshot
+from src.features import FCS_ELO, HOME_MARGIN, MARGIN_PER_ELO, MARGIN_SD, add_game_quality, snapshot
 from src.field import select_field
 from src.model import FEATURES, RESULT_DIR, as_ranked_table, load_features, train_production
 from src.report import README, replace_block
 
 CLEAN_DIR = Path(__file__).resolve().parent.parent / "data" / "clean"
 
-MARGIN_PER_ELO = 0.0417
-HOME_MARGIN = 3.42
-MARGIN_SD = 16.39
 ELO_K = 60.0
 
 SELECTION_DATE = "2026-12-06"  # games after this (e.g. Army-Navy) don't affect the field

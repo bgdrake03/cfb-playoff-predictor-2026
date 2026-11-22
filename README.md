@@ -48,7 +48,41 @@ CFBD API ──► ingest ──► clean ──► features ──► model ─
 | Features | `src/features.py` | Builds each team's résumé *as of each committee week* using only games already played |
 | Model | `src/model.py` | Ridge + gradient boosting + logistic blend; walk-forward backtest |
 | Rules | `src/field.py` | Turns a ranking into the 12-team field under the 2024, 2025 and 2026 rules |
+| Weekly forecast | `src/forecast.py` | Model v3: forecasts the committee's *next* list from the results plus its last list, saves it before release, scores it afterwards |
+| Simulation | `src/simulate.py` | Plays the rest of the season thousands of times for field / bye / champion odds |
+| Scorecard | `src/scorecard.py` | Scores the frozen model (tag `model-v1`) against each real committee list |
 | Automation | `.github/workflows/refresh.yml` | Weekly: ingest → clean → features → predict → test → commit |
+
+## Next committee list: weekly forecast
+
+<!-- FORECAST:START -->
+**Forecast of the committee's week 13 list**, made 2026-11-22 from this week's results and the
+committee's last list. It is saved before the list is released, then scored below.
+
+| Predicted rank | Team | Record | Committee's last rank |
+|---:|---|---|---:|
+| 1 | Utah | 10-0 | 2 |
+| 2 | Georgia | 9-1 | 1 |
+| 3 | Texas | 9-2 | 5 |
+| 4 | Miami | 9-1 | 7 |
+| 5 | Notre Dame | 9-1 | 6 |
+| 6 | Alabama | 9-2 | 3 |
+| 7 | Tennessee | 9-2 | 9 |
+| 8 | UCLA | 10-1 | 4 |
+| 9 | Indiana | 9-2 | 8 |
+| 10 | Wake Forest | 10-1 | 11 |
+| 11 | Texas Tech | 10-1 | 12 |
+| 12 | BYU | 9-2 | 10 |
+| 13 | Oregon | 8-3 | 13 |
+| 14 | Boise State | 9-1 | 17 |
+| 15 | Iowa | 9-2 | 15 |
+
+**Scored forecasts** (top 12 correct out of 12):
+
+*None yet. The first forecast is scored once the committee releases its list.*
+
+*Backtest, 39 past committee lists forecast one week ahead:* v3 11.2/12, résumé model 10.8/12, repeat-last-list 10.9/12. v3 beat v1 on 14 lists, tied on 23, lost on 2 (gain +0.36 teams, 3.4 standard errors).
+<!-- FORECAST:END -->
 
 ## Who makes the field? (simulated odds)
 
@@ -87,17 +121,18 @@ In backtests they were accurate at the extremes and mildly overconfident in the 
 ## Live scorecard (2026)
 
 <!-- SCORECARD:START -->
-Model frozen on Oct 17 (git tag `model-v1`), before the committee's first 2026 list, vs. the committee's real top 12.
-Later commits only fixed data plumbing (the latest-week snapshot); the model itself is unchanged:
+Committee's real top 12 vs. the model. **v1** was frozen on Oct 17 (git tag `model-v1`), before the
+committee's first 2026 list. **v2** adds conference strength and was designed after week 12, so
+weeks marked * are not a fair test of v2 and are left out of its average.
 
-| Committee week | Model: top 12 right | AP poll: top 12 right | Model: top 4 right |
-|---:|---:|---:|---:|
-| 10 | 11 / 12 | 12 / 12 | 4 / 4 |
-| 11 | 10 / 12 | 11 / 12 | 2 / 4 |
-| 12 | 10 / 12 | 12 / 12 | 2 / 4 |
-| **Average** | **10.3 / 12** | **11.7 / 12** | **2.7 / 4** |
+| Committee week | v1: top 12 right | v2: top 12 right | AP poll: top 12 right | v1: top 4 right |
+|---:|---:|---:|---:|---:|
+| 10 | 11 / 12 | 11* / 12 | 12 / 12 | 4 / 4 |
+| 11 | 10 / 12 | 10* / 12 | 11 / 12 | 2 / 4 |
+| 12 | 10 / 12 | 10* / 12 | 12 / 12 | 2 / 4 |
+| **Average** | **10.3 / 12** | **not enough weeks yet** | **11.7 / 12** | **2.7 / 4** |
 
-Latest list (week 12): model missed BYU; Texas Tech; model wrongly included Boise State; Oregon.
+Latest list (week 12): v1 missed BYU; Texas Tech; v1 wrongly included Boise State; Oregon.
 <!-- SCORECARD:END -->
 
 ## How well does it work?
@@ -147,6 +182,14 @@ earlier seasons. `python -m src.simulate_backtest` reproduces this.
   turns a résumé into a ranking, which changes far more slowly than rosters do.
 - **Where it misses:** almost entirely bubble teams (committee #10–#16). Several misses were
   conference champions, which led to building the rules engine.
+- **Investigating the 2026 misses (BYU, Texas Tech).** They are bubble noise, not a pattern: the model
+  had them 13th and 15th against the committee's 10th and 12th, and measured on Big 12 teams alone
+  the historical bias is about zero. The one real, repeatable flaw was over-rating Group of 5 teams
+  (37% of the model's Group of 5 top-15 picks were teams the committee didn't rank top 20, e.g.
+  Boise State in 2026). Adding conference strength (**model v2**) cut that to 26% and added about
+  0.09 correct picks per week (~1.7 standard errors), so it is promising but not proven. A
+  strength-of-record feature added nothing measurable and was dropped. v1 stays frozen; v2 is scored
+  alongside it on future committee lists.
 - **Conference-record features didn't help** (10.75 vs 10.75), so they're built but not used.
   Auto-bids are handled as explicit rules instead.
 

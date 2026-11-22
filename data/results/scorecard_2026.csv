@@ -1,13 +1,16 @@
 ranking_week,method,top12_correct,top4_correct,seed_error,missed,wrongly_in
-10,model,11,4,1.7272727272727273,Notre Dame,USC
+10,model_v1,11,4,1.7272727272727273,Notre Dame,USC
+10,model_v2,11,3,1.9090909090909092,Notre Dame,USC
 10,ap_poll,12,3,2.1666666666666665,,
 10,elo_only,9,2,4.555555555555555,Kentucky; UCLA; BYU,LSU; Iowa; Wake Forest
 10,record_then_sos,8,2,2.375,Alabama; Texas; Ole Miss; Ohio State,Boise State; UTSA; Wake Forest; Texas Tech
-11,model,10,2,2.2,BYU; Texas Tech,USC; Boise State
+11,model_v1,10,2,2.2,BYU; Texas Tech,USC; Boise State
+11,model_v2,10,2,1.9,BYU; Texas Tech,USC; Wake Forest
 11,ap_poll,11,3,1.6363636363636365,Kentucky,Wake Forest
 11,elo_only,8,1,3.25,UCLA; BYU; Kentucky; Texas Tech,Ohio State; Iowa; LSU; Ole Miss
 11,record_then_sos,8,3,3.25,Texas; Tennessee; BYU; Kentucky,Boise State; Wake Forest; New Mexico; Liberty
-12,model,10,2,2.1,BYU; Texas Tech,Boise State; Oregon
+12,model_v1,10,2,2.1,BYU; Texas Tech,Boise State; Oregon
+12,model_v2,10,2,2.1,BYU; Texas Tech,Oregon; Boise State
 12,ap_poll,12,3,1.5,,
 12,elo_only,9,1,3.888888888888889,UCLA; BYU; Texas Tech,Ohio State; Iowa; LSU
 12,record_then_sos,10,3,3.3,Tennessee; BYU,Boise State; Liberty

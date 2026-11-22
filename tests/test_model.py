@@ -56,3 +56,23 @@ def test_blend_is_average_of_standardized_scores():
     blend = Blend([Const([1, 2, 3]), Const([10, 20, 30])])
     out = blend.predict(None)
     assert np.allclose(out, [-1.2247, 0, 1.2247], atol=1e-3)
+
+
+def test_v1_feature_list_is_frozen():
+    """model-v1 was frozen on 2026-10-17. If this fails, the live scorecard no longer scores the
+    model it claims to. Create a new model version instead of editing this list."""
+    from src.model import FEATURES
+
+    assert FEATURES == [
+        "wins", "losses", "win_pct", "fbs_wins", "fbs_losses", "avg_margin", "sos",
+        "quality_wins", "quality_losses", "bad_losses", "best_win_elo", "worst_loss_elo",
+        "last3_wins", "elo_current", "undefeated",
+        "sos_now", "quality_wins_now", "bad_losses_now", "win_value", "loss_cost",
+        "best_win_now", "worst_loss_now",
+    ]
+
+
+def test_v2_only_adds_conference_strength():
+    from src.model import CONF_STRENGTH_FEATURES, FEATURES, FEATURES_V2
+
+    assert FEATURES_V2 == FEATURES + CONF_STRENGTH_FEATURES

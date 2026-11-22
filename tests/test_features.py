@@ -9,7 +9,7 @@ YEARS = sorted(int(f.stem.split("_")[-1]) for f in FEATURE_DIR.glob("features_*.
 
 def make_team_games(rows: list[dict]) -> pd.DataFrame:
     base = {
-        "week": 1, "opponent": "Opp", "opponent_conference": "Z", "conference_game": False, "start_date": "2026-09-05T23:00:00.000Z", "team": "Alpha",
+        "week": 1, "opponent": "Opp", "is_home": True, "neutral_site": False, "opponent_conference": "Z", "conference_game": False, "start_date": "2026-09-05T23:00:00.000Z", "team": "Alpha",
         "team_conference": "X", "opponent_is_fbs": True, "result": 1, "margin": 10.0,
         "team_pregame_elo": 1500.0, "team_postgame_elo": 1510.0, "opponent_pregame_elo": 1400.0,
     }
@@ -137,3 +137,53 @@ def test_finished_seasons_are_flagged_complete():
     for year in range(2014, 2026):
         flag = pd.read_csv(FEATURE_DIR / f"features_{year}.csv")["season_complete"]
         assert (flag == 1).all(), year
+
+
+# ---------- conference strength and strength of record ----------
+
+def test_independents_get_a_neutral_conference_strength(features):
+    ind = features[features["conference"] == "FBS Independents"]
+    if ind.empty:
+        pytest.skip("no independents")
+    week = ind["ranking_week"].iloc[0]
+    snap = features[features["ranking_week"] == week]
+    assert ind[ind["ranking_week"] == week]["conf_strength"].iloc[0] == pytest.approx(snap["elo_current"].mean())
+
+
+def test_conference_strength_is_the_mean_elo_of_its_teams(features):
+    snap = features[features["ranking_week"] == features["ranking_week"].max()]
+    big = snap[snap["conference"] != "FBS Independents"]
+    expected = big.groupby("conference")["elo_current"].transform("mean")
+    assert (big["conf_strength"] - expected).abs().max() < 1e-6
+
+
+def test_strength_of_record_rewards_beating_a_hard_schedule():
+    # Same 2-0 record; the team that beat strong opponents should be further above expectation.
+    def team(name, opp_elo):
+        mine = [{"team": name, "week": w, "opponent": f"{name}_opp{w}", "opponent_pregame_elo": opp_elo,
+                 "team_pregame_elo": 1700.0, "team_postgame_elo": 1700.0} for w in (1, 2)]
+        # The opponents must exist as teams so their current rating is known.
+        theirs = [{"team": f"{name}_opp{w}", "week": w, "opponent": name, "team_pregame_elo": opp_elo,
+                   "team_postgame_elo": opp_elo, "opponent_pregame_elo": 1700.0, "result": 0, "margin": -10.0} for w in (1, 2)]
+        return make_team_games(mine + theirs)
+
+    games = add_game_quality(pd.concat([team("Hard", 1900.0), team("Easy", 1300.0)], ignore_index=True))
+    snap = snapshot(games).set_index("team")
+    assert snap.loc["Hard", "wins_above_ref"] > snap.loc["Easy", "wins_above_ref"]
+
+
+# ---------- last committee list (used by v3) ----------
+
+def test_last_list_never_comes_from_the_same_or_a_later_week(features):
+    """Leakage guard: a snapshot may only use a committee list released before it."""
+    known = features.dropna(subset=["last_list_week"])
+    assert (known["last_list_week"] < known["ranking_week"]).all()
+
+
+def test_last_list_rank_is_a_real_rank_or_the_unranked_marker(features):
+    known = features.dropna(subset=["last_list_rank"])
+    assert known["last_list_rank"].between(1, 25).any() or known.empty
+    assert set(known.loc[~known["last_list_rank"].between(1, 25), "last_list_rank"]) <= {40.0}
+    # exactly 25 teams carry a real rank in every snapshot that has a last list
+    for _, snap in known.groupby("ranking_week"):
+        assert snap["last_list_rank"].between(1, 25).sum() == 25

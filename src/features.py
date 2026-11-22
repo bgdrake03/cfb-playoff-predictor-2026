@@ -18,6 +18,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from scipy.special import ndtr
 
 ROOT = Path(__file__).resolve().parent.parent
 CLEAN_DIR = ROOT / "data" / "clean"
@@ -27,7 +28,14 @@ COMMITTEE = "Playoff Committee Rankings"
 
 # FCS opponents have no Elo in the data; give them a fixed, clearly-below-average rating.
 FCS_ELO = 1250.0
-MARGIN_CAP = 28  # a 50-point blowout shouldn't count much more than a 28-point one
+
+# Game model fitted on 2021-2025 FBS-vs-FBS games: margin ~ Normal(0.0417*EloDiff + 3.42*home, 16.39).
+# Shared by the simulator and the strength-of-record feature so they cannot drift apart.
+MARGIN_PER_ELO = 0.0417
+HOME_MARGIN = 3.42
+MARGIN_SD = 16.39
+UNRANKED_IN_LIST = 40.0  # "not in the committee's top 25" when a list exists
+MARGIN_CAP = 28 # a 50-point blowout shouldn't count much more than a 28-point one
 QUALITY_PCT = 0.80  # opponent in the top 20% of that week's Elo = a "quality" opponent
 BAD_PCT = 0.50  # losing to an opponent below the median = a "bad" loss
 
@@ -123,6 +131,11 @@ def snapshot(games: pd.DataFrame) -> pd.DataFrame:
         quality_now=games["opp_now_pct"] >= QUALITY_PCT,
         bad_now=games["opp_now_pct"] < BAD_PCT,
     )
+    # Strength of record: how many wins a top-25-caliber team would be expected to have against
+    # THIS schedule (home/away included), so we can see how far above that a team really is.
+    ref_elo = ref_now[-25] if len(ref_now) >= 25 else np.median(ref_now)
+    loc = np.where(games["neutral_site"].astype(bool), 0.0, np.where(games["is_home"], 1.0, -1.0))
+    games = games.assign(p_ref=ndtr((MARGIN_PER_ELO * (ref_elo - games["opp_now"]) + HOME_MARGIN * loc) / MARGIN_SD))
     by = games.groupby("team")
 
     out = pd.DataFrame(
@@ -159,6 +172,12 @@ def snapshot(games: pd.DataFrame) -> pd.DataFrame:
     # Leads (or shares the lead of) its conference. After the title games this is the champion.
     best_in_conf = out.groupby("conference")["conf_win_pct"].transform("max")
     out["conf_leader"] = ((out["conf_win_pct"] == best_in_conf) & (conf_games > 0)).astype(int)
+    # How strong is this team's whole conference right now? Data-driven (average Elo), not a list
+    # of conference names, so it also handles realignment (e.g. the rebuilt 2026 Pac-12).
+    out["conf_strength"] = out.groupby("conference")["elo_current"].transform("mean")
+    # Independents are not a conference (2-3 unrelated teams): give them the FBS-wide average.
+    out.loc[out["conference"] == "FBS Independents", "conf_strength"] = out["elo_current"].mean()
+    out["elo_vs_conf"] = out["elo_current"] - out["conf_strength"]
     out["conf_champion"] = pick_champions(games, out)
     out[["win_value", "loss_cost"]] = out[["win_value", "loss_cost"]].fillna(0.0)
     count_cols = ["fbs_wins", "fbs_losses", "quality_wins", "quality_losses", "bad_losses",
@@ -167,6 +186,9 @@ def snapshot(games: pd.DataFrame) -> pd.DataFrame:
     out["wins"] = out["wins"].astype(int)
     out["losses"] = out["losses"].astype(int)
     out["win_pct"] = out["wins"] / out["games"]
+    expected_wins_ref = by["p_ref"].sum()
+    out["wins_above_ref"] = out["wins"] - expected_wins_ref
+    out["ref_expected_losses"] = out["games"] - expected_wins_ref
     out["undefeated"] = (out["losses"] == 0).astype(int)
     return out.reset_index()
 
@@ -217,6 +239,17 @@ def build_year(year: int) -> pd.DataFrame:
                 available = poll_df[poll_df["week"] <= week]["week"]
                 poll_df = poll_df[poll_df["week"] == available.max()] if not available.empty else poll_df.iloc[0:0]
             snap[col] = snap["team"].map(poll_df.set_index("school")["rank"])
+
+        # The committee's most recent list released BEFORE this one. It is sticky: teams move a few
+        # spots at a time, so the last list is a strong clue to the next. Strictly earlier weeks only.
+        earlier = sorted(w for w in set(regular_ranks.loc[regular_ranks["poll"] == COMMITTEE, "week"]) if w < week)
+        if earlier:
+            last = regular_ranks[(regular_ranks["poll"] == COMMITTEE) & (regular_ranks["week"] == earlier[-1])]
+            snap["last_list_rank"] = snap["team"].map(last.set_index("school")["rank"]).fillna(UNRANKED_IN_LIST)
+            snap["last_list_week"] = earlier[-1]
+        else:
+            snap["last_list_rank"] = np.nan  # no list has been published yet (first list of the year)
+            snap["last_list_week"] = np.nan
         frames.append(snap)
 
     result = pd.concat(frames, ignore_index=True)

@@ -36,7 +36,20 @@ HINDSIGHT_FEATURES = [
     "sos_now", "quality_wins_now", "bad_losses_now", "win_value", "loss_cost",
     "best_win_now", "worst_loss_now",
 ]
-FEATURES = BASE_FEATURES + HINDSIGHT_FEATURES
+FEATURES = BASE_FEATURES + HINDSIGHT_FEATURES  # model v1: FROZEN on 2026-10-17 (git tag model-v1). Do not edit.
+
+# Model v2 (experimental): adds how strong the team's whole conference is. Motivated by a diagnosed
+# bias: v1 over-rated Group of 5 teams (37% of its Group of 5 top-15 picks were teams the committee
+# did not rank top 20). On 2017-2025 walk-forward tests it cut that to 26% and nudged accuracy up
+# (+0.09 teams per week, ~1.7 standard errors), so it is promising but not proven.
+CONF_STRENGTH_FEATURES = ["conf_strength", "elo_vs_conf"]
+FEATURES_V2 = FEATURES + CONF_STRENGTH_FEATURES
+
+# Model v3 (experimental, a different job): forecast the committee's NEXT list. The committee is
+# sticky, so its previous list is a strong input. This helps one week ahead (+0.37 teams, 3.6
+# standard errors over 38 past lists) but fades by three weeks, so it is NOT used for the
+# Selection Day forecast or the simulator.
+FEATURES_V3 = FEATURES + ["last_list_rank"]
 # Built in features.py but NOT used: in testing, conference-record features did not improve
 # predictions (10.75 vs 10.75 of 12). Better handled as the post-2024 auto-bid rule.
 CONFERENCE_FEATURES = ["conf_win_pct", "conf_losses", "conf_leader"]
@@ -244,7 +257,8 @@ def backtest_field(df: pd.DataFrame) -> pd.DataFrame:
 
 # ---------- predict the current season ----------
 
-def train_production(df: pd.DataFrame, model_name: str = "blend", window: int | None = None, before: int | None = None):
+def train_production(df: pd.DataFrame, model_name: str = "blend", window: int | None = None, before: int | None = None,
+                     features: list[str] | None = None):
     """Fit the production model on every finished season (or only those before `before`, for
     honest backtests). Returns (model, seasons_used)."""
     train_df = add_target(finished_seasons(df))
@@ -254,7 +268,7 @@ def train_production(df: pd.DataFrame, model_name: str = "blend", window: int | 
     if window:
         seasons = seasons[-window:]
     train = train_df[train_df["season"].isin(seasons)]
-    return make_models()[model_name].fit(train[FEATURES], train["target"]), seasons
+    return make_models()[model_name].fit(train[features or FEATURES], train["target"]), seasons
 
 
 def predict_current(df: pd.DataFrame, model_name: str = "blend", window: int | None = None) -> pd.DataFrame:

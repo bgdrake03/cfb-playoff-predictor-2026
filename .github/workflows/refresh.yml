@@ -45,6 +45,9 @@ jobs:
       - name: Score the frozen model against the committee's lists
         run: python -m src.scorecard
 
+      - name: Forecast the next committee list and score earlier forecasts
+        run: python -m src.forecast
+
       - name: Simulate the rest of the season
         run: python -m src.simulate --sims 500 --readme
 
