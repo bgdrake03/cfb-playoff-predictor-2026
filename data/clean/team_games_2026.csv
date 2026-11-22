@@ -376,6 +376,7 @@ game_id,season,season_type,week,start_date,team,team_conference,team_classificat
 401856734,2026,regular,9,2026-10-31T19:30:00.000Z,Georgia,SEC,fbs,Florida,SEC,fbs,False,True,True,27.0,8.0,2023.0,1643.0,2037.0,True,19.0,1
 401856741,2026,regular,10,2026-11-08T00:30:00.000Z,Georgia,SEC,fbs,Ole Miss,SEC,fbs,False,False,True,42.0,7.0,2037.0,1973.0,2130.0,True,35.0,1
 401856883,2026,regular,11,2026-11-14T20:30:00.000Z,Georgia,SEC,fbs,Missouri,SEC,fbs,True,False,True,48.0,21.0,2130.0,1767.0,2160.0,True,27.0,1
+401856753,2026,regular,12,2026-11-22T00:30:00.000Z,Georgia,SEC,fbs,South Carolina,SEC,fbs,False,False,True,34.0,6.0,2160.0,1646.0,2210.0,True,28.0,1
 401868170,2026,regular,1,2026-09-05T23:00:00.000Z,Georgia Southern,Sun Belt,fbs,Charleston Southern,OVC,fcs,True,False,False,31.0,0.0,1376.0,,1376.0,False,31.0,1
 401858219,2026,regular,2,2026-09-12T23:30:00.000Z,Georgia Southern,Sun Belt,fbs,Clemson,ACC,fbs,False,False,False,7.0,22.0,1376.0,1541.0,1359.0,True,-15.0,0
 401869948,2026,regular,3,2026-09-19T23:00:00.000Z,Georgia Southern,Sun Belt,fbs,Jacksonville State,Conference USA,fbs,False,False,False,27.0,31.0,1359.0,1426.0,1358.0,True,-4.0,0
@@ -549,6 +550,7 @@ game_id,season,season_type,week,start_date,team,team_conference,team_classificat
 401856729,2026,regular,8,2026-10-24T23:30:00.000Z,Kentucky,SEC,fbs,Vanderbilt,SEC,fbs,True,False,True,34.0,17.0,1599.0,1577.0,1634.0,True,17.0,1
 401856745,2026,regular,10,2026-11-07T23:15:00.000Z,Kentucky,SEC,fbs,Tennessee,SEC,fbs,False,False,True,6.0,34.0,1634.0,1829.0,1584.0,True,-28.0,0
 401856884,2026,regular,11,2026-11-14T23:15:00.000Z,Kentucky,SEC,fbs,Florida,SEC,fbs,True,False,True,14.0,21.0,1584.0,1596.0,1572.0,True,-7.0,0
+401856751,2026,regular,12,2026-11-22T00:30:00.000Z,Kentucky,SEC,fbs,Missouri,SEC,fbs,False,False,True,14.0,28.0,1572.0,1737.0,1554.0,True,-14.0,0
 401856660,2026,regular,1,2026-09-05T23:30:00.000Z,LSU,SEC,fbs,Clemson,ACC,fbs,True,False,False,51.0,10.0,1616.0,1670.0,1745.0,True,41.0,1
 401867796,2026,regular,2,2026-09-12T23:30:00.000Z,LSU,SEC,fbs,Louisiana Tech,Sun Belt,fbs,True,False,False,45.0,14.0,1745.0,1454.0,1794.0,True,31.0,1
 401856688,2026,regular,3,2026-09-19T23:30:00.000Z,LSU,SEC,fbs,Ole Miss,SEC,fbs,False,False,True,24.0,32.0,1794.0,1851.0,1786.0,True,-8.0,0
@@ -657,6 +659,7 @@ game_id,season,season_type,week,start_date,team,team_conference,team_classificat
 401858282,2026,regular,9,2026-10-31T23:30:00.000Z,Miami,ACC,fbs,North Carolina,ACC,fbs,False,False,True,38.0,35.0,2018.0,1461.0,1993.0,True,3.0,1
 401858291,2026,regular,10,2026-11-08T00:30:00.000Z,Miami,ACC,fbs,Notre Dame,FBS Independents,fbs,False,False,False,24.0,31.0,1993.0,2073.0,1988.0,True,-7.0,0
 401858296,2026,regular,11,2026-11-14T17:00:00.000Z,Miami,ACC,fbs,Duke,ACC,fbs,True,False,True,36.0,25.0,1988.0,1822.0,1996.0,True,11.0,1
+401858302,2026,regular,12,2026-11-22T00:00:00.000Z,Miami,ACC,fbs,Virginia Tech,ACC,fbs,True,False,True,28.0,20.0,1996.0,1400.0,1985.0,True,8.0,1
 401858207,2026,regular,1,2026-09-05T16:30:00.000Z,Miami (OH),Mid-American,fbs,Pittsburgh,ACC,fbs,False,False,False,14.0,59.0,1364.0,1576.0,1259.0,True,-45.0,0
 401866417,2026,regular,2,2026-09-12T17:00:00.000Z,Miami (OH),Mid-American,fbs,Holy Cross,Patriot,fcs,True,False,False,45.0,7.0,1252.0,,1252.0,False,38.0,1
 401856797,2026,regular,3,2026-09-19T19:30:00.000Z,Miami (OH),Mid-American,fbs,Cincinnati,Big 12,fbs,False,False,False,31.0,35.0,1259.0,1516.0,1263.0,True,-4.0,0
@@ -733,6 +736,7 @@ game_id,season,season_type,week,start_date,team,team_conference,team_classificat
 401856733,2026,regular,9,2026-10-31T23:45:00.000Z,Missouri,SEC,fbs,Arkansas,SEC,fbs,False,False,True,34.0,10.0,1747.0,1515.0,1784.0,True,24.0,1
 401856743,2026,regular,10,2026-11-07T17:00:00.000Z,Missouri,SEC,fbs,Texas,SEC,fbs,True,False,True,20.0,34.0,1784.0,1936.0,1767.0,True,-14.0,0
 401856883,2026,regular,11,2026-11-14T20:30:00.000Z,Missouri,SEC,fbs,Georgia,SEC,fbs,False,False,True,21.0,48.0,1767.0,2130.0,1737.0,True,-27.0,0
+401856751,2026,regular,12,2026-11-22T00:30:00.000Z,Missouri,SEC,fbs,Kentucky,SEC,fbs,True,False,True,28.0,14.0,1737.0,1572.0,1755.0,True,14.0,1
 401856668,2026,regular,1,2026-09-05T23:00:00.000Z,Missouri State,Conference USA,fbs,Texas A&M,SEC,fbs,False,False,False,0.0,50.0,1385.0,1748.0,1284.0,True,-50.0,0
 401871046,2026,regular,2,2026-09-12T23:00:00.000Z,Missouri State,Conference USA,fbs,Lindenwood,OVC,fcs,True,False,False,48.0,14.0,1268.0,,1268.0,False,34.0,1
 401871047,2026,regular,3,2026-09-19T22:30:00.000Z,Missouri State,Conference USA,fbs,Marshall,Sun Belt,fbs,True,False,False,24.0,30.0,1284.0,1388.0,1281.0,True,-6.0,0
@@ -873,6 +877,7 @@ game_id,season,season_type,week,start_date,team,team_conference,team_classificat
 401859185,2026,regular,9,2026-10-31T16:00:00.000Z,Notre Dame,FBS Independents,fbs,Navy,American Athletic,fbs,False,True,False,35.0,13.0,2082.0,1487.0,2073.0,True,22.0,1
 401858291,2026,regular,10,2026-11-08T00:30:00.000Z,Notre Dame,FBS Independents,fbs,Miami,ACC,fbs,True,False,False,31.0,24.0,2073.0,1993.0,2078.0,True,7.0,1
 401858294,2026,regular,11,2026-11-14T20:30:00.000Z,Notre Dame,FBS Independents,fbs,Boston College,ACC,fbs,True,False,False,41.0,7.0,2078.0,1360.0,2090.0,True,34.0,1
+401858307,2026,regular,12,2026-11-22T00:30:00.000Z,Notre Dame,FBS Independents,fbs,SMU,ACC,fbs,True,False,False,24.0,3.0,2090.0,1668.0,2115.0,True,21.0,1
 401858430,2026,regular,1,2026-09-05T16:00:00.000Z,Ohio,Mid-American,fbs,Nebraska,Big Ten,fbs,False,False,False,21.0,49.0,1372.0,1538.0,1318.0,True,-28.0,0
 401866418,2026,regular,2,2026-09-12T22:00:00.000Z,Ohio,Mid-American,fbs,Jacksonville State,Conference USA,fbs,True,False,False,29.0,27.0,1318.0,1428.0,1320.0,True,2.0,1
 401866423,2026,regular,3,2026-09-19T23:00:00.000Z,Ohio,Mid-American,fbs,South Alabama,Sun Belt,fbs,False,False,False,36.0,41.0,1320.0,1391.0,1318.0,True,-5.0,0
@@ -1023,6 +1028,7 @@ game_id,season,season_type,week,start_date,team,team_conference,team_classificat
 401858278,2026,regular,9,2026-10-31T16:00:00.000Z,SMU,ACC,fbs,Syracuse,ACC,fbs,False,False,True,27.0,30.0,1759.0,1328.0,1752.0,True,-3.0,0
 401858288,2026,regular,10,2026-11-07T00:00:00.000Z,SMU,ACC,fbs,Virginia Tech,ACC,fbs,True,False,True,51.0,28.0,1752.0,1516.0,1783.0,True,23.0,1
 401858301,2026,regular,11,2026-11-14T17:00:00.000Z,SMU,ACC,fbs,Wake Forest,ACC,fbs,True,False,True,7.0,49.0,1783.0,1871.0,1668.0,True,-42.0,0
+401858307,2026,regular,12,2026-11-22T00:30:00.000Z,SMU,ACC,fbs,Notre Dame,FBS Independents,fbs,False,False,False,3.0,24.0,1668.0,2090.0,1643.0,True,-21.0,0
 401866408,2026,regular,1,2026-08-29T22:30:00.000Z,Sacramento State,Mid-American,fbs,Eastern Michigan,Mid-American,fbs,False,False,True,17.0,28.0,1500.0,1326.0,1466.0,True,-11.0,0
 401866411,2026,regular,1,2026-09-06T02:00:00.000Z,Sacramento State,Mid-American,fbs,Mississippi Valley State,SWAC,fcs,True,False,False,52.0,0.0,1476.0,,1476.0,False,52.0,1
 401860883,2026,regular,2,2026-09-13T02:30:00.000Z,Sacramento State,Mid-American,fbs,Fresno State,Pac-12,fbs,False,False,False,3.0,49.0,1466.0,1449.0,1324.0,True,-46.0,0
@@ -1066,6 +1072,7 @@ game_id,season,season_type,week,start_date,team,team_conference,team_classificat
 401864529,2026,regular,9,2026-10-31T20:00:00.000Z,San José State,Mountain West,fbs,New Mexico,Mountain West,fbs,True,False,True,16.0,21.0,1352.0,1680.0,1365.0,True,-5.0,0
 401864534,2026,regular,10,2026-11-07T21:00:00.000Z,San José State,Mountain West,fbs,Northern Illinois,Mountain West,fbs,True,False,True,30.0,19.0,1365.0,1077.0,1364.0,True,11.0,1
 401864538,2026,regular,11,2026-11-15T00:00:00.000Z,San José State,Mountain West,fbs,Air Force,Mountain West,fbs,False,False,True,3.0,24.0,1364.0,1466.0,1325.0,True,-21.0,0
+401864544,2026,regular,12,2026-11-22T00:00:00.000Z,San José State,Mountain West,fbs,UNLV,Mountain West,fbs,True,False,True,22.0,24.0,1325.0,1482.0,1326.0,True,-2.0,0
 401868316,2026,regular,1,2026-09-05T23:00:00.000Z,South Alabama,Sun Belt,fbs,SE Louisiana,Southland,fcs,True,False,False,39.0,14.0,1390.0,,1390.0,False,25.0,1
 401864575,2026,regular,2,2026-09-12T23:00:00.000Z,South Alabama,Sun Belt,fbs,Tulane,American Athletic,fbs,False,False,False,24.0,28.0,1390.0,1529.0,1391.0,True,-4.0,0
 401866423,2026,regular,3,2026-09-19T23:00:00.000Z,South Alabama,Sun Belt,fbs,Ohio,Mid-American,fbs,True,False,False,41.0,36.0,1391.0,1320.0,1393.0,True,5.0,1
@@ -1087,6 +1094,7 @@ game_id,season,season_type,week,start_date,team,team_conference,team_classificat
 401856736,2026,regular,9,2026-10-31T20:15:00.000Z,South Carolina,SEC,fbs,Oklahoma,SEC,fbs,False,False,True,42.0,25.0,1702.0,1719.0,1745.0,True,17.0,1
 401856744,2026,regular,10,2026-11-07T20:00:00.000Z,South Carolina,SEC,fbs,Texas A&M,SEC,fbs,True,False,True,17.0,9.0,1745.0,1728.0,1756.0,True,8.0,1
 401856882,2026,regular,11,2026-11-15T00:45:00.000Z,South Carolina,SEC,fbs,Arkansas,SEC,fbs,False,False,True,6.0,34.0,1756.0,1479.0,1646.0,True,-28.0,0
+401856753,2026,regular,12,2026-11-22T00:30:00.000Z,South Carolina,SEC,fbs,Georgia,SEC,fbs,True,False,True,6.0,34.0,1646.0,2160.0,1596.0,True,-28.0,0
 401862699,2026,regular,1,2026-09-05T23:00:00.000Z,South Florida,American Athletic,fbs,Florida International,Conference USA,fbs,True,False,False,19.0,9.0,1682.0,1382.0,1679.0,True,10.0,1
 401862702,2026,regular,2,2026-09-12T16:00:00.000Z,South Florida,American Athletic,fbs,Army,American Athletic,fbs,False,False,True,28.0,24.0,1679.0,1527.0,1676.0,True,4.0,1
 401862777,2026,regular,3,2026-09-19T23:00:00.000Z,South Florida,American Athletic,fbs,Delaware State,MEAC,fcs,True,False,False,59.0,17.0,1682.0,,1682.0,False,42.0,1
@@ -1314,6 +1322,7 @@ game_id,season,season_type,week,start_date,team,team_conference,team_classificat
 401864530,2026,regular,9,2026-11-01T02:30:00.000Z,UNLV,Mountain West,fbs,Northern Illinois,Mountain West,fbs,True,False,True,31.0,24.0,1489.0,1065.0,1477.0,True,7.0,1
 401864535,2026,regular,10,2026-11-08T03:30:00.000Z,UNLV,Mountain West,fbs,Wyoming,Mountain West,fbs,True,False,True,35.0,41.0,1477.0,1363.0,1457.0,True,-6.0,0
 401864539,2026,regular,11,2026-11-15T00:30:00.000Z,UNLV,Mountain West,fbs,New Mexico,Mountain West,fbs,False,False,True,21.0,17.0,1457.0,1713.0,1482.0,True,4.0,1
+401864544,2026,regular,12,2026-11-22T00:00:00.000Z,UNLV,Mountain West,fbs,San José State,Mountain West,fbs,False,False,True,24.0,22.0,1482.0,1325.0,1481.0,True,2.0,1
 401858436,2026,regular,1,2026-09-05T01:00:00.000Z,USC,Big Ten,fbs,Fresno State,Pac-12,fbs,True,False,False,39.0,0.0,1752.0,1532.0,1835.0,True,39.0,1
 401864494,2026,regular,1,2026-08-29T19:00:00.000Z,USC,Big Ten,fbs,San José State,Mountain West,fbs,True,False,False,42.0,26.0,1747.0,1411.0,1752.0,True,16.0,1
 401858445,2026,regular,2,2026-09-13T03:00:00.000Z,USC,Big Ten,fbs,Louisiana,Sun Belt,fbs,True,False,False,49.0,30.0,1835.0,1389.0,1837.0,True,19.0,1
@@ -1398,6 +1407,7 @@ game_id,season,season_type,week,start_date,team,team_conference,team_classificat
 401858276,2026,regular,8,2026-10-24T23:00:00.000Z,Virginia Tech,ACC,fbs,Clemson,ACC,fbs,False,False,True,20.0,16.0,1507.0,1541.0,1516.0,True,4.0,1
 401858288,2026,regular,10,2026-11-07T00:00:00.000Z,Virginia Tech,ACC,fbs,SMU,ACC,fbs,False,False,True,28.0,51.0,1516.0,1752.0,1485.0,True,-23.0,0
 401858299,2026,regular,11,2026-11-15T00:30:00.000Z,Virginia Tech,ACC,fbs,Stanford,ACC,fbs,True,False,True,22.0,40.0,1485.0,1144.0,1400.0,True,-18.0,0
+401858302,2026,regular,12,2026-11-22T00:00:00.000Z,Virginia Tech,ACC,fbs,Miami,ACC,fbs,False,False,True,20.0,28.0,1400.0,1996.0,1411.0,True,-8.0,0
 401858204,2026,regular,1,2026-09-03T23:00:00.000Z,Wake Forest,ACC,fbs,Akron,Mid-American,fbs,True,False,False,38.0,16.0,1520.0,925.0,1516.0,True,22.0,1
 401858224,2026,regular,2,2026-09-12T16:00:00.000Z,Wake Forest,ACC,fbs,Purdue,Big Ten,fbs,False,False,False,38.0,36.0,1516.0,1318.0,1508.0,True,2.0,1
 401858226,2026,regular,3,2026-09-18T23:30:00.000Z,Wake Forest,ACC,fbs,Miami,ACC,fbs,True,False,True,20.0,33.0,1508.0,1901.0,1514.0,True,-13.0,0

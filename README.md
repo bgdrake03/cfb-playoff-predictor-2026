@@ -15,17 +15,17 @@ committee's playoff field, applying the actual selection rules.
 
 | Seed | Team | Conference | Record | Why they're in |
 |---:|---|---|---|---|
-| 1 | Utah | Big 12 | 10-0 | Big 12 champion |
-| 2 | Georgia | SEC | 9-1 | SEC champion |
+| 1 | Georgia | SEC | 10-1 | SEC champion |
+| 2 | Utah | Big 12 | 10-0 | Big 12 champion |
 | 3 | Texas | SEC | 9-2 | at-large |
-| 4 | Miami | ACC | 9-1 | ACC champion |
-| 5 | Alabama | SEC | 9-2 | at-large |
-| 6 | Notre Dame | FBS Independents | 9-1 | Notre Dame (ranked top 12) |
+| 4 | Miami | ACC | 10-1 | ACC champion |
+| 5 | Notre Dame | FBS Independents | 10-1 | Notre Dame (ranked top 12) |
+| 6 | Alabama | SEC | 9-2 | at-large |
 | 7 | Tennessee | SEC | 9-2 | at-large |
 | 8 | Indiana | Big Ten | 9-2 | at-large |
 | 9 | Wake Forest | ACC | 10-1 | at-large |
 | 10 | UCLA | Big Ten | 10-1 | Big Ten champion |
-| 11 | Oregon | Big Ten | 8-3 | at-large |
+| 11 | Texas Tech | Big 12 | 10-1 | at-large |
 | 12 | Boise State | Pac-12 | 9-1 | highest-ranked other champion |
 
 Seeds 1–4 get first-round byes. 2026 seeding is assumed to follow the ranking (see Limitations).
@@ -62,10 +62,10 @@ committee's last list. It is saved before the list is released, then scored belo
 | Predicted rank | Team | Record | Committee's last rank |
 |---:|---|---|---:|
 | 1 | Utah | 10-0 | 2 |
-| 2 | Georgia | 9-1 | 1 |
+| 2 | Georgia | 10-1 | 1 |
 | 3 | Texas | 9-2 | 5 |
-| 4 | Miami | 9-1 | 7 |
-| 5 | Notre Dame | 9-1 | 6 |
+| 4 | Miami | 10-1 | 7 |
+| 5 | Notre Dame | 10-1 | 6 |
 | 6 | Alabama | 9-2 | 3 |
 | 7 | Tennessee | 9-2 | 9 |
 | 8 | UCLA | 10-1 | 4 |
@@ -91,28 +91,28 @@ committee's last list. It is saved before the list is released, then scored belo
 
 | Team | Record | Games left | Makes the field | First-round bye | Wins conference |
 |---|---|---:|---:|---:|---:|
-| Georgia | 9-1 | 2 | 100% | 91% | 60% |
-| Texas | 9-2 | 1 | 100% | 78% | 32% |
-| Notre Dame | 9-1 | 2 | 100% | 9% | 0% |
-| Miami | 9-1 | 2 | 96% | 48% | 49% |
-| Alabama | 9-2 | 1 | 95% | 9% | 8% |
-| Utah | 10-0 | 2 | 92% | 61% | 55% |
-| Wake Forest | 10-1 | 1 | 88% | 37% | 51% |
-| Tennessee | 9-2 | 1 | 79% | 1% | 0% |
-| Indiana | 9-2 | 1 | 76% | 51% | 63% |
-| Iowa | 9-2 | 1 | 70% | 2% | 3% |
-| Oregon | 8-3 | 1 | 61% | 12% | 20% |
-| BYU | 9-2 | 1 | 55% | 0% | 0% |
-| Boise State | 9-1 | 1 | 50% | 0% | 50% |
-| Texas Tech | 10-1 | 1 | 50% | 0% | 45% |
-| UCLA | 10-1 | 1 | 24% | 0% | 14% |
-| Liberty | 10-1 | 1 | 18% | 0% | 84% |
-| USC | 8-3 | 1 | 15% | 0% | 0% |
-| New Mexico | 9-2 | 1 | 15% | 0% | 59% |
-| UTSA | 8-2 | 2 | 7% | 0% | 16% |
-| Texas State | 7-4 | 0 | 5% | 0% | 50% |
+| Georgia | 10-1 | 1 | 100% | 100% | 64% |
+| Texas | 9-2 | 1 | 100% | 82% | 29% |
+| Notre Dame | 10-1 | 1 | 100% | 6% | 0% |
+| Miami | 10-1 | 1 | 98% | 47% | 47% |
+| Alabama | 9-2 | 1 | 92% | 7% | 6% |
+| Wake Forest | 10-1 | 1 | 88% | 35% | 53% |
+| Utah | 10-0 | 2 | 88% | 55% | 51% |
+| Tennessee | 9-2 | 1 | 84% | 1% | 1% |
+| Indiana | 9-2 | 1 | 79% | 53% | 68% |
+| Iowa | 9-2 | 1 | 73% | 3% | 3% |
+| BYU | 9-2 | 1 | 58% | 0% | 0% |
+| Oregon | 8-3 | 1 | 56% | 12% | 18% |
+| Boise State | 9-1 | 1 | 53% | 0% | 53% |
+| Texas Tech | 10-1 | 1 | 52% | 0% | 49% |
+| UCLA | 10-1 | 1 | 21% | 0% | 11% |
+| Liberty | 10-1 | 1 | 17% | 0% | 84% |
+| USC | 8-3 | 1 | 12% | 0% | 0% |
+| New Mexico | 9-2 | 1 | 10% | 0% | 55% |
+| UTSA | 8-2 | 2 | 7% | 0% | 15% |
+| Texas State | 7-4 | 0 | 5% | 0% | 47% |
 | James Madison | 8-3 | 1 | 4% | 0% | 21% |
-| Air Force | 9-2 | 1 | 1% | 0% | 4% |
+| Air Force | 9-2 | 1 | 2% | 0% | 4% |
 
 These capture game-to-game luck only; they assume the model's ranking is what the committee will do.
 In backtests they were accurate at the extremes and mildly overconfident in the middle (see below).
