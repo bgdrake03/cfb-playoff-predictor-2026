@@ -42,6 +42,12 @@ jobs:
       - name: Update README with the latest prediction
         run: python -m src.report
 
+      - name: Score the frozen model against the committee's lists
+        run: python -m src.scorecard
+
+      - name: Simulate the rest of the season
+        run: python -m src.simulate --sims 500 --readme
+
       - name: Validate (pipeline stops here if data is bad)
         run: python -m pytest -q
 

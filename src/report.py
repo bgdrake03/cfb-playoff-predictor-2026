@@ -39,10 +39,11 @@ def render_block(field: pd.DataFrame, week: int, updated: str) -> str:
     return "\n".join(lines)
 
 
-def replace_block(readme: str, block: str) -> str:
-    pattern = re.compile(re.escape(START) + r".*?" + re.escape(END), re.DOTALL)
+def replace_block(readme: str, block: str, start: str = START, end: str = END) -> str:
+    """Replace everything between two marker comments (inclusive) with `block`."""
+    pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), re.DOTALL)
     if not pattern.search(readme):
-        raise ValueError(f"README is missing the {START} ... {END} markers")
+        raise ValueError(f"README is missing the {start} ... {end} markers")
     return pattern.sub(lambda _: block, readme, count=1)
 
 

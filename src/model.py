@@ -244,15 +244,22 @@ def backtest_field(df: pd.DataFrame) -> pd.DataFrame:
 
 # ---------- predict the current season ----------
 
-def predict_current(df: pd.DataFrame, model_name: str = "blend", window: int | None = None) -> pd.DataFrame:
+def train_production(df: pd.DataFrame, model_name: str = "blend", window: int | None = None, before: int | None = None):
+    """Fit the production model on every finished season (or only those before `before`, for
+    honest backtests). Returns (model, seasons_used)."""
     train_df = add_target(finished_seasons(df))
-    current_season = int(df["season"].max())
-    train_seasons = sorted(s for s in train_df["season"].unique() if s < current_season and train_df[train_df["season"] == s]["committee_rank"].notna().any())
+    if before is not None:
+        train_df = train_df[train_df["season"] < before]
+    seasons = sorted(s for s in train_df["season"].unique() if train_df[train_df["season"] == s]["committee_rank"].notna().any())
     if window:
-        train_seasons = train_seasons[-window:]
-    train = train_df[train_df["season"].isin(train_seasons)]
+        seasons = seasons[-window:]
+    train = train_df[train_df["season"].isin(seasons)]
+    return make_models()[model_name].fit(train[FEATURES], train["target"]), seasons
 
-    model = make_models()[model_name].fit(train[FEATURES], train["target"])
+
+def predict_current(df: pd.DataFrame, model_name: str = "blend", window: int | None = None) -> pd.DataFrame:
+    current_season = int(df["season"].max())
+    model, train_seasons = train_production(df, model_name, window)
 
     now = df[df["season"] == current_season]
     now = now[now["ranking_week"] == now["ranking_week"].max()].copy()

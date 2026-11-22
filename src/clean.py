@@ -137,7 +137,10 @@ def clean(year: int) -> None:
     team_games.to_csv(CLEAN_DIR / f"team_games_{year}.csv", index=False)
     print(f"Wrote {len(team_games)} team-game rows ({played['id'].nunique()} completed games)")
 
-    upcoming_cols = ["id", "week", "startDate", "homeTeam", "awayTeam", "neutralSite", "conferenceGame"]
+    upcoming_cols = [
+        "id", "seasonType", "week", "startDate", "homeTeam", "awayTeam", "neutralSite", "conferenceGame",
+        "homeConference", "awayConference", "homeClassification", "awayClassification",
+    ]
     upcoming[upcoming_cols].to_csv(CLEAN_DIR / f"upcoming_{year}.csv", index=False)
     print(f"Wrote {len(upcoming)} upcoming games")
 

@@ -50,6 +50,57 @@ CFBD API ──► ingest ──► clean ──► features ──► model ─
 | Rules | `src/field.py` | Turns a ranking into the 12-team field under the 2024, 2025 and 2026 rules |
 | Automation | `.github/workflows/refresh.yml` | Weekly: ingest → clean → features → predict → test → commit |
 
+## Who makes the field? (simulated odds)
+
+<!-- SIMULATION:START -->
+*500 simulations of the rest of the regular season and the conference title games, updated 2026-11-22.*
+
+| Team | Record | Games left | Makes the field | First-round bye | Wins conference |
+|---|---|---:|---:|---:|---:|
+| Texas | 9-2 | 1 | 100% | 77% | 31% |
+| Georgia | 9-1 | 2 | 100% | 94% | 61% |
+| Notre Dame | 9-1 | 2 | 98% | 8% | 0% |
+| Miami | 9-1 | 2 | 95% | 46% | 47% |
+| Alabama | 9-2 | 1 | 92% | 10% | 8% |
+| Utah | 10-0 | 2 | 92% | 60% | 53% |
+| Wake Forest | 10-1 | 1 | 88% | 40% | 53% |
+| Tennessee | 9-2 | 1 | 84% | 1% | 1% |
+| Indiana | 9-2 | 1 | 76% | 48% | 61% |
+| Iowa | 9-2 | 1 | 70% | 3% | 3% |
+| Oregon | 8-3 | 1 | 63% | 12% | 20% |
+| BYU | 9-2 | 1 | 54% | 0% | 0% |
+| Texas Tech | 10-1 | 1 | 50% | 0% | 47% |
+| Boise State | 9-1 | 1 | 50% | 0% | 50% |
+| UCLA | 10-1 | 1 | 26% | 0% | 15% |
+| Liberty | 10-1 | 1 | 17% | 0% | 82% |
+| New Mexico | 9-2 | 1 | 16% | 0% | 62% |
+| USC | 8-3 | 1 | 13% | 0% | 0% |
+| UTSA | 8-2 | 2 | 7% | 0% | 18% |
+| Texas State | 7-4 | 0 | 4% | 0% | 50% |
+| Memphis | 8-3 | 1 | 3% | 0% | 55% |
+| Air Force | 9-2 | 1 | 2% | 0% | 5% |
+| James Madison | 8-3 | 1 | 2% | 0% | 26% |
+
+These capture game-to-game luck only; they assume the model's ranking is what the committee will do.
+In backtests they were accurate at the extremes and mildly overconfident in the middle (see below).
+<!-- SIMULATION:END -->
+
+## Live scorecard (2026)
+
+<!-- SCORECARD:START -->
+Model frozen on Oct 17 (git tag `model-v1`), before the committee's first 2026 list, vs. the committee's real top 12.
+Later commits only fixed data plumbing (the latest-week snapshot); the model itself is unchanged:
+
+| Committee week | Model: top 12 right | AP poll: top 12 right | Model: top 4 right |
+|---:|---:|---:|---:|
+| 10 | 11 / 12 | 12 / 12 | 4 / 4 |
+| 11 | 10 / 12 | 11 / 12 | 2 / 4 |
+| 12 | 10 / 12 | 12 / 12 | 2 / 4 |
+| **Average** | **10.3 / 12** | **11.7 / 12** | **2.7 / 4** |
+
+Latest list (week 12): model missed BYU; Texas Tech; model wrongly included Boise State; Oregon.
+<!-- SCORECARD:END -->
+
 ## How well does it work?
 
 Tested **walk-forward**: to predict a season, the model trains only on earlier seasons. Scores are
@@ -66,6 +117,29 @@ The model uses **no human polls and no team names** as inputs — only results, 
 strength, and opponent quality. Adding the playoff selection rules (auto-bids for conference
 champions) raised the average from 10.50 to 10.75 on a 2026-rules replay of the same seasons, and
 fixed the first-round-bye picks in 2024 (2 of 4 → 4 of 4).
+
+### Are the simulated odds trustworthy?
+
+Backtested on 7 past seasons (2017, 2018, 2021–2025): rewind to two committee weeks before
+Selection Day, simulate with only the information available then, and a model trained only on
+earlier seasons. `python -m src.simulate_backtest` reproduces this.
+
+| Simulated chance of making the field | Team-seasons | Predicted | Actually made it |
+|---|---:|---:|---:|
+| about 0% | 793 | 0% | 0.4% |
+| 5–20% | 20 | 13% | 20% |
+| 20–40% | 21 | 29% | 14% |
+| 40–60% | 20 | 49% | 50% |
+| 60–80% | 10 | 70% | 60% |
+| 80–95% | 12 | 89% | 92% |
+| 95–100% | 48 | 99% | 98% |
+
+- **It beats a plain yes/no prediction:** Brier score 0.020 vs 0.028 for the field, and 0.012 vs
+  0.020 for first-round byes (lower is better).
+- **Be cautious in the middle.** Those buckets hold only 10–21 team-seasons each, and two were
+  overconfident. Bye odds are noisier than field odds.
+- **What it ignores:** the committee's own unpredictability beyond the model, injuries, and real
+  conference tiebreakers for the title games (it uses conference record, then Elo).
 
 ### Findings
 
