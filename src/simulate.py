@@ -195,7 +195,11 @@ def simulate_once(ctx: Context, margins: np.ndarray, rng: np.random.Generator) -
 
     score = pd.Series(ctx.model.predict(snap[FEATURES]), index=snap.index)
     rank = (score + snap["elo_current"] * 1e-9).rank(ascending=False, method="first")
-    return select_field(as_ranked_table(snap, rank), ctx.rule), champions
+    remaining_losses = (1 - sim["result"]).groupby(sim["team"]).sum()  # regular-season games still to play
+    return select_field(as_ranked_table(snap, rank), ctx.rule), champions, remaining_losses
+
+
+MIN_CONDITIONAL_SIMS = 20  # don't report "if they win out" odds from a handful of simulations
 
 
 def run(n_sims: int, seed: int = 0, ctx: "Context | None" = None) -> pd.DataFrame:
@@ -207,14 +211,26 @@ def run(n_sims: int, seed: int = 0, ctx: "Context | None" = None) -> pd.DataFram
     bye = in_field.copy()
     champion = in_field.copy()
     seed_sum = in_field.copy()
+
+    # For "what if they win out / slip" odds: per team, how many sims they won all remaining games,
+    # and how often they made the field in each case.
+    pos = {t: i for i, t in enumerate(ctx.teams)}
+    n_win_out, in_win_out, n_lose, in_lose = (np.zeros(len(ctx.teams)) for _ in range(4))
     for i in range(n_sims):
-        field, champs = simulate_once(ctx, margins[i], rng)
+        field, champs, remaining_losses = simulate_once(ctx, margins[i], rng)
         in_field[field["team"]] += 1
         bye[field.loc[field["seed"] <= 4, "team"]] += 1
         seed_sum[field["team"]] += field["seed"].to_numpy()
         for c in champs:
             if c in champion.index:
                 champion[c] += 1
+        made = np.zeros(len(ctx.teams))
+        made[[pos[t] for t in field["team"]]] = 1
+        lost = remaining_losses.reindex(ctx.teams).fillna(0).to_numpy() > 0
+        n_lose += lost
+        in_lose += made * lost
+        n_win_out += ~lost
+        in_win_out += made * ~lost
 
     wins = ctx.played.groupby("team")["result"].sum()
     losses = ctx.played.groupby("team").size() - wins
@@ -230,6 +246,9 @@ def run(n_sims: int, seed: int = 0, ctx: "Context | None" = None) -> pd.DataFram
             "elo": ctx.elo.round(0),
         }
     )
+    enough = (out["games_left"] > 0).to_numpy()
+    out["p_field_if_win_out"] = np.where(enough & (n_win_out >= MIN_CONDITIONAL_SIMS), in_win_out / np.maximum(n_win_out, 1), np.nan)
+    out["p_field_if_loses"] = np.where(enough & (n_lose >= MIN_CONDITIONAL_SIMS), in_lose / np.maximum(n_lose, 1), np.nan)
     out.index.name = "team"
     out["n_sims"] = n_sims
     return out.sort_values(["p_field", "p_bye"], ascending=False).reset_index()
@@ -240,21 +259,32 @@ END = "<!-- SIMULATION:END -->"
 
 
 def render_block(result: pd.DataFrame, updated: str) -> str:
+    from src.explain import simulation_why
+
     n = int(result["n_sims"].iloc[0])
     shown = result[result["p_field"] >= 0.01]
+
+    def pct(x):
+        return "–" if pd.isna(x) else f"{x:.0%}"
+
     lines = [
         START,
         f"*{n:,} simulations of the rest of the regular season and the conference title games, updated {updated}.*",
         "",
-        "| Team | Record | Games left | Makes the field | First-round bye | Wins conference |",
-        "|---|---|---:|---:|---:|---:|",
+        "| Team | Record | Games left | Makes the field | If they win out | If they lose at least once | First-round bye | Wins conference |",
+        "|---|---|---:|---:|---:|---:|---:|---:|",
     ]
     for r in shown.itertuples():
-        lines.append(f"| {r.team} | {r.record} | {r.games_left} | {r.p_field:.0%} | {r.p_bye:.0%} | {r.p_conf_champion:.0%} |")
+        lines.append(
+            f"| {r.team} | {r.record} | {r.games_left} | **{r.p_field:.0%}** | {pct(r.p_field_if_win_out)} | "
+            f"{pct(r.p_field_if_loses)} | {r.p_bye:.0%} | {r.p_conf_champion:.0%} |"
+        )
     lines += [
         "",
         "These capture game-to-game luck only; they assume the model's ranking is what the committee will do.",
         "In backtests they were accurate at the extremes and mildly overconfident in the middle (see below).",
+        "",
+        simulation_why(result),
         END,
     ]
     return "\n".join(lines)

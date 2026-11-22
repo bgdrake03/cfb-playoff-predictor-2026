@@ -45,7 +45,7 @@ def score_current_season(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def render_block(scores: pd.DataFrame) -> str:
+def render_block(scores: pd.DataFrame, why: str = "") -> str:
     lines = [START]
     if scores.empty:
         lines += ["*The committee has not released a 2026 list yet.*", END]
@@ -67,8 +67,24 @@ def render_block(scores: pd.DataFrame) -> str:
     v2_avg = f"{pivot.loc[fair_v2, 'model_v2'].mean():.1f} / 12 ({len(fair_v2)} wk)" if len(fair_v2) else "not enough weeks yet"
     lines.append(f"| **Average** | **{pivot['model_v1'].mean():.1f} / 12** | **{v2_avg}** | **{pivot['ap_poll'].mean():.1f} / 12** | **{top4.mean():.1f} / 4** |")
     latest = scores[(scores["method"] == "model_v1") & (scores["ranking_week"] == scores["ranking_week"].max())].iloc[0]
-    lines += ["", f"Latest list (week {int(latest['ranking_week'])}): v1 missed {latest['missed'] or 'nobody'}; v1 wrongly included {latest['wrongly_in'] or 'nobody'}.", END]
+    lines += ["", f"Latest list (week {int(latest['ranking_week'])}): v1 missed {latest['missed'] or 'nobody'}; v1 wrongly included {latest['wrongly_in'] or 'nobody'}."]
+    if why:
+        lines += ["", why]
+    lines.append(END)
     return "\n".join(lines)
+
+
+def build_why(df: pd.DataFrame, scores: pd.DataFrame) -> str:
+    """Explain the disagreements on the most recent committee list, as of that week."""
+    from src.explain import scorecard_why, team_table
+
+    week = int(scores["ranking_week"].max())
+    w = df[(df["season_complete"] == 0) & (df["ranking_week"] == week)]
+    v1, _ = train_production(df)
+    score = pd.Series(v1.predict(w[FEATURES]), index=w.index)
+    games = pd.read_csv(model_module.FEATURE_DIR.parent / "clean" / f"team_games_{int(w['season'].iloc[0])}.csv")
+    games = games[games["week"] <= week - 1]  # only what was known when that list came out
+    return scorecard_why(w, score, team_table(w, games), week)
 
 
 def main() -> None:
@@ -76,7 +92,8 @@ def main() -> None:
     scores = score_current_season(df)
     scores.to_csv(model_module.RESULT_DIR / "scorecard_2026.csv", index=False)
     text = README.read_text(encoding="utf-8")
-    README.write_text(replace_block(text, render_block(scores), START, END), encoding="utf-8")
+    why = build_why(df, scores) if not scores.empty else ""
+    README.write_text(replace_block(text, render_block(scores, why), START, END), encoding="utf-8")
     show = scores[scores["method"].isin(["model_v1", "model_v2", "ap_poll"])]
     print(show.pivot(index="ranking_week", columns="method", values="top12_correct").to_string())
 

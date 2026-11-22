@@ -125,7 +125,7 @@ def summarize_backtest(res: pd.DataFrame) -> dict:
 
 # ---------- README ----------
 
-def render_block(week: int | None, forecast: pd.DataFrame | None, scores: pd.DataFrame, bt: dict | None) -> str:
+def render_block(week: int | None, forecast: pd.DataFrame | None, scores: pd.DataFrame, bt: dict | None, why: str = "") -> str:
     lines = [START]
     if forecast is not None:
         made = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -139,6 +139,8 @@ def render_block(week: int | None, forecast: pd.DataFrame | None, scores: pd.Dat
         for r in forecast.head(15).itertuples():
             last = "unranked" if r.last_list_rank >= 40 else f"{int(r.last_list_rank)}"
             lines.append(f"| {r.predicted_rank} | {r.team} | {r.record} | {last} |")
+        if why:
+            lines += ["", why]
     else:
         lines.append("*Waiting for new games: the committee's latest list has already been published.*")
 
@@ -198,8 +200,16 @@ def main() -> None:
     bt = pd.read_csv(summary_path, index_col=0)["value"].to_dict() if summary_path.exists() else None
     if bt:
         bt = {k: (int(v) if k in ("lists", "better", "same", "worse") else float(v)) for k, v in bt.items()}
+    why = ""
+    if made:
+        from src.explain import forecast_why, team_table
+
+        season = df[df["season_complete"] == 0]
+        snap = season[season["ranking_week"] == week]
+        games = pd.read_csv(RESULT_DIR.parent / "clean" / f"team_games_{int(snap['season'].iloc[0])}.csv")
+        why = forecast_why(forecast, team_table(snap, games))
     text = README.read_text(encoding="utf-8")
-    README.write_text(replace_block(text, render_block(week, forecast, scores, bt), START, END), encoding="utf-8")
+    README.write_text(replace_block(text, render_block(week, forecast, scores, bt, why), START, END), encoding="utf-8")
 
 
 if __name__ == "__main__":

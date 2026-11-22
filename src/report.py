@@ -20,7 +20,7 @@ START = "<!-- PREDICTION:START -->"
 END = "<!-- PREDICTION:END -->"
 
 
-def render_block(field: pd.DataFrame, week: int, updated: str) -> str:
+def render_block(field: pd.DataFrame, week: int, updated: str, why: str = "") -> str:
     """Markdown for the prediction section, including the markers."""
     lines = [
         START,
@@ -34,8 +34,10 @@ def render_block(field: pd.DataFrame, week: int, updated: str) -> str:
     lines += [
         "",
         "Seeds 1–4 get first-round byes. 2026 seeding is assumed to follow the ranking (see Limitations).",
-        END,
     ]
+    if why:
+        lines += ["", why]
+    lines.append(END)
     return "\n".join(lines)
 
 
@@ -53,9 +55,20 @@ def latest_week() -> int:
 
 
 def main() -> None:
+    from src.explain import field_why, team_table
+    from src.model import load_features
+
     field = pd.read_csv(PREDICTION)
     updated = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    block = render_block(field, latest_week(), updated)
+
+    # Plain-English "why" text, built from the same snapshot the prediction used.
+    df = load_features()
+    season = df[df["season_complete"] == 0]
+    snap = season[season["ranking_week"] == season["ranking_week"].max()]
+    games = pd.read_csv(ROOT / "data" / "clean" / f"team_games_{int(snap['season'].iloc[0])}.csv")
+    ranking = pd.read_csv(ROOT / "data" / "results" / "ranking_2026.csv")
+    why = field_why(field, ranking, team_table(snap, games))
+    block = render_block(field, latest_week(), updated, why)
     README.write_text(replace_block(README.read_text(encoding="utf-8"), block), encoding="utf-8")
     print(f"README updated with {len(field)} teams (week {latest_week()})")
 
