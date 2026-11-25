@@ -1576,3 +1576,103 @@ season,seasonType,week,poll,rank,school,conference,points
 2026,regular,10,Playoff Committee Rankings,23,Oregon,Big Ten,0
 2026,regular,10,Playoff Committee Rankings,24,Florida,SEC,0
 2026,regular,10,Playoff Committee Rankings,25,Boise State,Pac-12,0
+2026,regular,13,Coaches Poll,1,Georgia,SEC,1811
+2026,regular,13,Coaches Poll,2,Utah,Big 12,1755
+2026,regular,13,Coaches Poll,3,Notre Dame,FBS Independents,1668
+2026,regular,13,Coaches Poll,4,Miami,ACC,1569
+2026,regular,13,Coaches Poll,5,Alabama,SEC,1465
+2026,regular,13,Coaches Poll,6,Texas,SEC,1444
+2026,regular,13,Coaches Poll,7,Tennessee,SEC,1345
+2026,regular,13,Coaches Poll,8,Wake Forest,ACC,1320
+2026,regular,13,Coaches Poll,9,Texas Tech,Big 12,1230
+2026,regular,13,Coaches Poll,10,UCLA,Big Ten,1211
+2026,regular,13,Coaches Poll,11,BYU,Big 12,1094
+2026,regular,13,Coaches Poll,12,Indiana,Big Ten,1058
+2026,regular,13,Coaches Poll,13,Iowa,Big Ten,993
+2026,regular,13,Coaches Poll,14,Oregon,Big Ten,905
+2026,regular,13,Coaches Poll,15,USC,Big Ten,720
+2026,regular,13,Coaches Poll,16,Arizona,Big 12,659
+2026,regular,13,Coaches Poll,17,Houston,Big 12,571
+2026,regular,13,Coaches Poll,18,Louisville,ACC,564
+2026,regular,13,Coaches Poll,19,Ole Miss,SEC,485
+2026,regular,13,Coaches Poll,20,Florida,SEC,294
+2026,regular,13,Coaches Poll,21,Boise State,Pac-12,230
+2026,regular,13,Coaches Poll,22,Oklahoma,SEC,207
+2026,regular,13,Coaches Poll,23,Missouri,SEC,187
+2026,regular,13,Coaches Poll,24,Liberty,Conference USA,171
+2026,regular,13,Coaches Poll,25,Kentucky,SEC,155
+2026,regular,13,AP Top 25,1,Georgia,SEC,1711
+2026,regular,13,AP Top 25,2,Utah,Big 12,1662
+2026,regular,13,AP Top 25,3,Notre Dame,FBS Independents,1591
+2026,regular,13,AP Top 25,4,Miami,ACC,1491
+2026,regular,13,AP Top 25,5,Texas,SEC,1392
+2026,regular,13,AP Top 25,6,Alabama,SEC,1352
+2026,regular,13,AP Top 25,7,Tennessee,SEC,1317
+2026,regular,13,AP Top 25,8,Wake Forest,ACC,1264
+2026,regular,13,AP Top 25,9,Texas Tech,Big 12,1166
+2026,regular,13,AP Top 25,10,UCLA,Big Ten,1156
+2026,regular,13,AP Top 25,11,BYU,Big 12,1030
+2026,regular,13,AP Top 25,12,Indiana,Big Ten,958
+2026,regular,13,AP Top 25,13,Iowa,Big Ten,912
+2026,regular,13,AP Top 25,14,Oregon,Big Ten,865
+2026,regular,13,AP Top 25,15,USC,Big Ten,699
+2026,regular,13,AP Top 25,16,Arizona,Big 12,665
+2026,regular,13,AP Top 25,17,Houston,Big 12,570
+2026,regular,13,AP Top 25,18,Louisville,ACC,565
+2026,regular,13,AP Top 25,19,Oklahoma,SEC,341
+2026,regular,13,AP Top 25,20,Florida,SEC,310
+2026,regular,13,AP Top 25,21,Liberty,Conference USA,294
+2026,regular,13,AP Top 25,22,Boise State,Pac-12,207
+2026,regular,13,AP Top 25,23,Ole Miss,SEC,200
+2026,regular,13,AP Top 25,24,Missouri,SEC,125
+2026,regular,13,AP Top 25,25,Ohio State,Big Ten,112
+2026,regular,13,FCS Coaches Poll,1,Tarleton State,UAC,623
+2026,regular,13,FCS Coaches Poll,2,Montana State,Big Sky,599
+2026,regular,13,FCS Coaches Poll,3,South Dakota State,MVFC,577
+2026,regular,13,FCS Coaches Poll,4,Stephen F. Austin,Southland,549
+2026,regular,13,FCS Coaches Poll,5,South Dakota,MVFC,498
+2026,regular,13,FCS Coaches Poll,6,Lamar,Southland,491
+2026,regular,13,FCS Coaches Poll,7,Mercer,Southern,467
+2026,regular,13,FCS Coaches Poll,8,Youngstown State,MVFC,446
+2026,regular,13,FCS Coaches Poll,9,North Dakota,MVFC,411
+2026,regular,13,FCS Coaches Poll,10,Northern Arizona,Big Sky,404
+2026,regular,13,FCS Coaches Poll,11,Montana,Big Sky,338
+2026,regular,13,FCS Coaches Poll,12,Lehigh,Patriot,335
+2026,regular,13,FCS Coaches Poll,13,Tennessee Tech,Southern,316
+2026,regular,13,FCS Coaches Poll,14,Weber State,Big Sky,297
+2026,regular,13,FCS Coaches Poll,15,Illinois State,MVFC,263
+2026,regular,13,FCS Coaches Poll,16,Monmouth,Coastal Athletic,246
+2026,regular,13,FCS Coaches Poll,17,South Carolina State,MEAC,238
+2026,regular,13,FCS Coaches Poll,18,Austin Peay,UAC,179
+2026,regular,13,FCS Coaches Poll,19,UC Davis,Big Sky,141
+2026,regular,13,FCS Coaches Poll,20,UAlbany,Coastal Athletic,129
+2026,regular,13,FCS Coaches Poll,21,Incarnate Word,Southland,124
+2026,regular,13,FCS Coaches Poll,22,Harvard,Ivy,107
+2026,regular,13,FCS Coaches Poll,23,Campbell,Coastal Athletic,84
+2026,regular,13,FCS Coaches Poll,24,Idaho State,Big Sky,78
+2026,regular,13,FCS Coaches Poll,25,Dayton,Pioneer,58
+2026,regular,13,Playoff Committee Rankings,1,Georgia,SEC,0
+2026,regular,13,Playoff Committee Rankings,2,Utah,Big 12,0
+2026,regular,13,Playoff Committee Rankings,3,Texas,SEC,0
+2026,regular,13,Playoff Committee Rankings,4,Notre Dame,FBS Independents,0
+2026,regular,13,Playoff Committee Rankings,5,Tennessee,SEC,0
+2026,regular,13,Playoff Committee Rankings,6,Alabama,SEC,0
+2026,regular,13,Playoff Committee Rankings,7,Miami,ACC,0
+2026,regular,13,Playoff Committee Rankings,8,Wake Forest,ACC,0
+2026,regular,13,Playoff Committee Rankings,9,UCLA,Big Ten,0
+2026,regular,13,Playoff Committee Rankings,10,BYU,Big 12,0
+2026,regular,13,Playoff Committee Rankings,11,Texas Tech,Big 12,0
+2026,regular,13,Playoff Committee Rankings,12,Oregon,Big Ten,0
+2026,regular,13,Playoff Committee Rankings,13,Iowa,Big Ten,0
+2026,regular,13,Playoff Committee Rankings,14,Indiana,Big Ten,0
+2026,regular,13,Playoff Committee Rankings,15,USC,Big Ten,0
+2026,regular,13,Playoff Committee Rankings,16,Arizona,Big 12,0
+2026,regular,13,Playoff Committee Rankings,17,Oklahoma,SEC,0
+2026,regular,13,Playoff Committee Rankings,18,Houston,Big 12,0
+2026,regular,13,Playoff Committee Rankings,19,Louisville,ACC,0
+2026,regular,13,Playoff Committee Rankings,20,Florida,SEC,0
+2026,regular,13,Playoff Committee Rankings,21,Ohio State,Big Ten,0
+2026,regular,13,Playoff Committee Rankings,22,Ole Miss,SEC,0
+2026,regular,13,Playoff Committee Rankings,23,Missouri,SEC,0
+2026,regular,13,Playoff Committee Rankings,24,Washington,Big Ten,0
+2026,regular,13,Playoff Committee Rankings,25,Nebraska,Big Ten,0
